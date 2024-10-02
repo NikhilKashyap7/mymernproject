@@ -1,0 +1,18 @@
+.registor{
+    background-color: rgba(255, 200, 0, 0.25);
+
+}
+.r-btn{
+    background: linear-gradient(180deg, #d2582b, #001f03);
+    border: none;
+    padding: 10px 50px;
+    margin-right: 5px;
+    color: #fff;
+}
+.error-code{
+    color: orange;
+}
+.r-input{
+    background: rgba(237, 237, 237, 0.1);
+   
+}

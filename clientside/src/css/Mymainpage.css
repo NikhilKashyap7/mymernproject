@@ -1,0 +1,76 @@
+.carousel1 {
+    height: 700px;
+    width: 100%;
+}
+
+.carousel-img {
+    width: 100%;
+    height: auto;
+}
+
+.para-1{
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5vh;
+    justify-content: center;
+    font-size: 18px;
+}
+.para-2{
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: center;
+    font-size: 18px;
+
+}
+
+.slider {
+    position: relative;
+}
+
+.slider-img {
+    position: relative;
+}
+
+.slider-button {
+    position: absolute;
+    bottom: 5%;
+    left: 42%;
+    padding: 10px 20px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 700;
+}
+
+.slider-button:hover {
+    background-color: rgba(209, 54, 54, 0.9);
+    filter: drop-shadow(5px 5px 7px white);
+    color: black;
+    border-radius: 25px;
+}
+
+.s-btn {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    left: 45%;
+    position: absolute;
+    bottom: 5px;
+    margin: 5px;
+}
+
+.s-btn.active {
+    background-color: rgb(28, 27, 27);
+    margin-left: 25px;
+
+}

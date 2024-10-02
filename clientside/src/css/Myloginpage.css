@@ -1,0 +1,26 @@
+body {
+    height: 100vh;
+    margin: 0; 
+    background-image: url(../modules/images/loginpagebg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.login{
+    background-color: rgba(255, 200, 0, 0.25);
+    margin-top: auto;
+    height: 100vh;
+}
+.c-logo{
+    width: 200px;
+    height: 100px;
+}
+.c-btn
+{
+    background: linear-gradient(360deg, #d2582b, #001f03);
+    border: none;
+    padding: 8px 50px;
+    color: #fff;
+    margin-right: 5px;
+}
