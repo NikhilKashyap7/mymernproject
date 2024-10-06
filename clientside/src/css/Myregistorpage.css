@@ -1,6 +1,28 @@
+.r-wrapper{
+    height: 100vh;
+    background-image: url(../modules/images/registerpage.jpg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center; 
+    display: flex;
+    justify-content: center;
+    animation:animateBg 5s linear infinite;
+}
+/* @keyframes animateBg {
+    100% {
+      filter:hue-rotate(360deg);
+    }
+  } */
 .registor{
-    background-color: rgba(255, 200, 0, 0.25);
+    /* background-color: rgba(180, 22, 17, 0.25); */
+    backdrop-filter: blur(15px);
 
+    border: 2px solid rgba(255,255,255,.5);
+
+}
+.r-label{
+    color: white;
 }
 .r-btn{
     background: linear-gradient(180deg, #d2582b, #001f03);
@@ -9,10 +31,18 @@
     margin-right: 5px;
     color: #fff;
 }
+.r-btn:hover{
+    background: linear-gradient(360deg, #d2582b, #001f03);
+    border: none;
+    padding: 10px 50px;
+    margin-right: 5px;
+    color: black;
+}
 .error-code{
     color: orange;
 }
 .r-input{
     background: rgba(237, 237, 237, 0.1);
+    border: none;
    
 }

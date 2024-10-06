@@ -20,7 +20,8 @@ function Myregistorpage(){
   
   }
     return(
-        <form onSubmit={handleSubmit(mysubmit)}>
+
+        <form className='r-wrapper' onSubmit={handleSubmit(mysubmit)}>
             <div className='container'>
                 <div className='row justify-content-center'>
                     <div className='col-md-8 p-3 rounded shadow registor'>
@@ -33,7 +34,7 @@ function Myregistorpage(){
                                 </div>
                                 <div className='col-md-6'>
                         <div className="mb-3">
-                            <label className="form-label">Email address</label>
+                            <label className="form-label r-label">Email address</label>
                             <input type="email" className="form-control r-input" {...register("email",{required:true})}/>
                             {errors.email?.type==="required" && <p className='error-code'>@email id required!</p>}
 
@@ -41,21 +42,14 @@ function Myregistorpage(){
                     </div>
                     <div className='col-md-6'>
                         <div className="mb-3">
-                            <label className="form-label">FullName</label>
+                            <label className="form-label r-label">FullName</label>
                             <input type="text" className="form-control r-input"  {...register("fullname",{required:true,minLength:5})}/>
                             {errors.fullname?.type==="required" && <p className='error-code'>FullName required! </p>}
                         </div>
                     </div>
                     <div className='col-md-6'>
                         <div className="mb-3">
-                            <label className="form-label">FullName</label>
-                            <input type="text" className="form-control r-input"  {...register("fullname",{required:true,minLength:5})}/>
-                            {errors.fullname?.type==="required" && <p className='error-code'>FullName required! </p>}
-                        </div>
-                    </div>
-                    <div className='col-md-6'>
-                        <div className="mb-3">
-                            <label className="form-label">Phone No</label>
+                            <label className="form-label r-label">Phone No</label>
                             <input type="text" className="form-control r-input" {...register("phone",{required:true,maxLength:10,minLength:10,pattern:1234567890})}/>
                             {errors.phone?.type==="required" && <p className='error-code'>Please write your no.</p>}
                   {errors.phone?.type==="maxLength" && <p className='error-code'>Write your no. properly</p>}
@@ -65,29 +59,29 @@ function Myregistorpage(){
                     </div>
                     <div className='col-md-6'>
                 <div className="mb-3">
-                  <label className="form-label">Gender</label><br/>
+                  <label className="form-label r-label">Gender</label><br/>
                   <div className="form-check form-check-inline">
                     <input className="form-check-input r-input" type="radio" name="gender" value="male" {...register("gender",{required:true})}/>
-                    <label className="form-check-label">Male</label>
+                    <label className="form-check-label r-label">Male</label>
                   </div>
                   <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="gender" value="female" {...register("gender",{required:true})}/>
-                    <label className="form-check-label">Female</label>
+                    <input className="form-check-input r-input" type="radio" name="gender" value="female" {...register("gender",{required:true})}/>
+                    <label className="form-check-label r-label">Female</label>
                   </div>
                   {errors.gender?.type==="required" && <p className='error-code'>!Please select any option</p>}
                 </div>
               </div>
               <div className='col-md-6'>
                         <div className="mb-3">
-                            <label className="form-label">DOB</label>
+                            <label className="form-label r-label">DOB</label>
                             <input type="date" className="form-control r-input"/>
                             
                         </div>
                     </div>
                     <div className='col-md-6'>
                         <div className="mb-3">
-                            <label className="form-label">Course</label>
-                           <select className='form-select'>
+                            <label className="form-label r-label">Course</label>
+                           <select className='form-select r-input'>
                             <option>Mern</option>
                             <option>Mean</option>
                             <option>Java</option>
@@ -100,7 +94,7 @@ function Myregistorpage(){
                     </div>
                     <div className='col-md-6'>
                         <div className="mb-3">
-                            <label className="form-label">Password</label>
+                            <label className="form-label r-label">Password</label>
                             <input type="password" className="form-control r-input"/>
                            
                         </div>

@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import carimg1 from '../images/web-feature.jpg'
 import carimg2 from '../images/website-development-process-scaled.jpg'
+import Myfooterpage from "../shares/Myfooterpage";
 function Mymainpage(){
     const [slider, setSlider] = useState(0);
   const data = [
@@ -67,12 +68,14 @@ function Mymainpage(){
         </div>
 
 
-        <div>
+        <div className="para-3">
             <h3>Advance IT Training By Industry Experts</h3>
             <p>CodeSquadz provides career-oriented IT training on live projects from industry experts to level up your IT career through new-age tech skills.
             </p>
             
         </div>
+
+        <Myfooterpage/>
       </Fragment>
     )
 }

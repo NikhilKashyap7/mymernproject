@@ -1,0 +1,26 @@
+.footer{
+    display: flex;
+    padding: 5%;
+    border: 5px solid red;
+    justify-content: space-between;
+    align-items: center;
+}
+.f-description{
+    border: 5px solid black;
+    box-sizing: border-box;
+    width: 28%;
+}
+
+.f-courses{
+    border: 5px solid yellow;
+    box-sizing: border-box;
+    width: 28%;
+}
+.courses-li{
+    display: flex;
+}
+.address{
+    border: 5px solid green;
+    box-sizing: border-box;
+    width: 28%;
+}

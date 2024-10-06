@@ -14,6 +14,7 @@ import "./css/Myheaderpage.css"
 import "./css/Myloginpage.css"
 import "./css/Myregistorpage.css"
 import "./css/Mymainpage.css"
+import "./css/Myfooterpage.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

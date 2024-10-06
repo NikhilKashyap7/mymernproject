@@ -19,7 +19,7 @@ function Myloginpage(){
   
   }
     return(
-        <form onSubmit={handleSubmit(mysubmit)}>
+        <form  className="wrapper" onSubmit={handleSubmit(mysubmit)}>
         <div className='container'>
         <div className='row justify-content-center'>
             <div className='col-md-5  p-3 rounded shadow login'>
@@ -32,15 +32,15 @@ function Myloginpage(){
                         </div>
                         <div className='col-12'>
                             <div class="mb-3">
-                                <label class="form-label">Email address</label>
-                                <input type="email" className="form-control" {...register("email",{required:true})}/>
+                                <label class="form-label l-label">Email address</label>
+                                <input type="email" className="form-control l-input" {...register("email",{required:true})}/>
                                 {errors.email?.type==="required" && <p className='error-code'>@email id required!</p>}
                             </div>
                         </div>
                         <div className='col-12'>
-                            <div class="mb-3">
-                                <label class="form-label">Password</label>
-                                <input type="password" class="form-control" />
+                            <div class="mb-3">l
+                                <label class="form-label l-label">Password</label>
+                                <input type="password" className="form-control l-input" />
                             </div>
                         </div>
                         <div className='col-12 text-center'>
@@ -52,7 +52,7 @@ function Myloginpage(){
                         <div className='col-12 text-center'>
                             <div class="mb-3">
                                <Link to="/Myregistorpage" className="btn c-btn">Register Now</Link>
-                               <Link to="/" className="btn c-btn">Go Home..</Link>
+                               <Link to="/" className="btn c-btn" style={{marginTop:'5px'}}>Go Home..</Link>
                             </div>
                         </div>
                     </div>
