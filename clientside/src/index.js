@@ -15,6 +15,10 @@ import "./css/Myloginpage.css"
 import "./css/Myregistorpage.css"
 import "./css/Mymainpage.css"
 import "./css/Myfooterpage.css"
+import "./css/Mycustomtable.css"
+import Myuserdetailpage from './modules/dashboard/Myuserdetailpage';
+import Mycustomtable from './modules/dashboard/Mycustomtable';
+import OurStudentdata from './modules/dashboard/OurStudentdata';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,7 +28,12 @@ root.render(
     <Route path='/' element={<Mylandingpage/>} />
     <Route path='/Mylandingpage'element={<Mymainpage/>}/>
     <Route path='/Myloginpage' element={<Myloginpage/>}/>
-    <Route path='/Myregistorpage' element={<Myregistorpage/>} />
+    <Route path='/Myregistorpage' element={<Myregistorpage/>} >
+    </Route>
+    <Route path='/OurStudentdata' element={<OurStudentdata/>} ></Route>
+    <Route path='/Mycustomtable' element={<Mycustomtable/>}></Route>
+    <Route path='/Myuserdetailpage' element={<Myuserdetailpage/>} ></Route>
+
     </Routes>
     
     </BrowserRouter>

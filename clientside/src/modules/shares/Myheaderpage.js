@@ -47,6 +47,8 @@ function Myheaderpage()
                     </ul>
           </li>
           <li><Link to='/Myloginpage' class="btn btn-custom me-2">Login</Link></li>
+          <li><Link to='/OurStudentdata' class="btn btn-custom me-2">Our Student's</Link></li>
+
 
         </ul>
         <form class="d-flex" role="search">
