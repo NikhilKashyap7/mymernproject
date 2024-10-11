@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import logo from '../images/zencode.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Myregistorpage() {
     const navigate = useNavigate();
@@ -12,7 +12,8 @@ function Myregistorpage() {
         phone: "",
         dob: "",
         course: "",
-        pass: ""
+        pass: "",
+        gender: ""
     });
 
     const updateuser = (a) => {
@@ -27,7 +28,7 @@ function Myregistorpage() {
     }
 
     const mysubmitdata = async () => {
-        const { email, fullname, phone, course, dob, pass } = user;
+        const { email, fullname, phone, gender, course, dob, pass  } = user;
         if (user.email === '' || user.fullname === "" || user.pass === "") {
             alert("Please! fill inputs correctly");
         }
@@ -36,7 +37,7 @@ function Myregistorpage() {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    email, fullname, course, pass, phone, dob
+                    email, fullname, phone, gender, course, dob, pass
                 })
             });
             const data = await res.json();
@@ -48,21 +49,6 @@ function Myregistorpage() {
     }
 
 
-
-
-
-    //     const  mysubmit = (myform)=>{
-
-    //         if(myform)
-    //           {
-    //             toast.success("successfully registor page");
-    //            setTimeout(()=>{
-    //             navigate("/");
-    //            },2000);
-
-    //           }
-
-    //   }
     return (
 
         <form className='r-wrapper'>
@@ -99,11 +85,11 @@ function Myregistorpage() {
                                     <div className="mb-3">
                                         <label className="form-label r-label">Gender</label><br />
                                         <div className="form-check form-check-inline">
-                                            <input className="form-check-input r-input" type="radio" name="gender" value="male" />
+                                            <input className="form-check-input r-input" type="radio" name="gender" value="Male" checked={user.gender === "male"} onChange={updateuser} />
                                             <label className="form-check-label r-label">Male</label>
                                         </div>
                                         <div className="form-check form-check-inline">
-                                            <input className="form-check-input r-input" type="radio" name="gender" value="female" />
+                                            <input className="form-check-input r-input" type="radio" name="gender" value="Female" checked={user.gender === "female"} onChange={updateuser}/>
                                             <label className="form-check-label r-label">Female</label>
                                         </div>
 
@@ -120,8 +106,8 @@ function Myregistorpage() {
                                     <div className="mb-3">
                                         <label className="form-label r-label">Course</label>
                                         <select className='form-select r-input' name='course' value={user.course} onChange={updateuser}>
+                                        <option>Mean</option>
                                             <option>Mern</option>
-                                            <option>Mean</option>
                                             <option>Java</option>
                                             <option>Marketing</option>
                                             <option>Python</option>

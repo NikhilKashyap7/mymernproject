@@ -3,6 +3,10 @@ import {Link} from 'react-router-dom';
 import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import {faPenToSquare}from '@fortawesome/free-solid-svg-icons';
+import {faEye}from '@fortawesome/free-solid-svg-icons';
+import {faLeftLong}from '@fortawesome/free-solid-svg-icons';
+
 
 function Mycustomtable() {
     const [user, setuser] = useState([])
@@ -13,12 +17,26 @@ function Mycustomtable() {
         });
     }
 
+    const deletedata = async(id)=>
+        {
+            const confirmdDelete = window.confirm("Are you sure you want to delete this user data?");
+           if (confirmdDelete){
+           
+            await axios.delete(`http://localhost:4707/deleterecord/${id}`).then((y)=>{
+                console.log(y);
+                getalldata();
+                
+            });
+        }
+        }
+
     useEffect(()=>{
         getalldata();
     }, [])
 
     return (
         <Fragment>
+            <Link to="/" className="homepage-btn"><FontAwesomeIcon icon={faLeftLong} fade /></Link>
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col mt-3'>
@@ -57,9 +75,9 @@ function Mycustomtable() {
                             <td>{y.dob}</td>
                             <td>{y.gender}</td>
                             <td className='text-end'>
-                                <Link to="" className="badge text-bg-primary">Edit</Link>
-                                <button  className="btn badge text-bg-danger"><FontAwesomeIcon icon={faTrash} /></button>
-                                <Link to={'details/'+y._id} className="badge text-bg-info" >View</Link>
+                                <Link to="" className="badge btn edit-btn"><FontAwesomeIcon icon={faPenToSquare} /></Link>
+                                <button  className="btn badge  delete-btn" onClick={()=>deletedata(y._id)}><FontAwesomeIcon icon={faTrash} /></button>
+                                <Link to={'userview/'+y._id} className="badge  view-btn" ><FontAwesomeIcon icon={faEye} /></Link>
                             </td>
                         </tr>
                     )

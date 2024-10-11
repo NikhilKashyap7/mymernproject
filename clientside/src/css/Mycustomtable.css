@@ -1,4 +1,21 @@
+
+.homepage-btn{
+    font-size: 32px;
+    color: black;
+    background-color: gray;
+    border-radius: 50%;
+}
 .table-heading{
     background-color: brown;
     color: white;
+}
+
+.edit-btn{
+    color: grey;
+}
+.delete-btn{
+    color:red;
+}
+.view-btn{
+    color: black;
 }

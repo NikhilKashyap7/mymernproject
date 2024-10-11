@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const mynew = new mongoose.Schema({
-    mail:{
+    email:{
         type:String
     },
     fullname:{
@@ -17,6 +17,9 @@ const mynew = new mongoose.Schema({
         type:String
     },
     pass:{
+        type:String
+    },
+    gender:{ 
         type:String
     }
         

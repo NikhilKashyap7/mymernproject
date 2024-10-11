@@ -38,7 +38,7 @@ function Myloginpage(){
                             </div>
                         </div>
                         <div className='col-12'>
-                            <div class="mb-3">l
+                            <div class="mb-3">
                                 <label class="form-label l-label">Password</label>
                                 <input type="password" className="form-control l-input" />
                             </div>
@@ -46,6 +46,11 @@ function Myloginpage(){
                         <div className='col-12 text-center'>
                             <div class="mb-3">
                                <button className='btn c-btn'>Login</button>
+                            </div>
+                        </div>
+                        <div className='col-12 text-center'>
+                            <div class="mb-3">
+                               <p className=''>Don't have an account</p>
                             </div>
                         </div>
 
