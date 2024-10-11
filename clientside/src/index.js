@@ -16,10 +16,11 @@ import "./css/Myregistorpage.css"
 import "./css/Mymainpage.css"
 import "./css/Myfooterpage.css"
 import "./css/Mycustomtable.css"
+import "./css/Myerrorpage.css"
 import Mycustomtable from './modules/dashboard/Mycustomtable';
 import OurStudentdata from './modules/dashboard/OurStudentdata';
 import Userdataview from './modules/dashboard/Userdataview';
-
+import Myerrorpage from './modules/shares/Myerrorpage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -31,8 +32,10 @@ root.render(
     <Route path='/Myregistorpage' element={<Myregistorpage/>} >
     </Route>
     <Route path='/ourstudentdata' element={<OurStudentdata/>}></Route>
-    <Route path='/Mycustomtable' element={<Mycustomtable/>}></Route>
+    <Route path='/mycustomtable' element={<Mycustomtable/>}></Route>
     <Route path='/ourstudentdata/userview/:id' element={<Userdataview/>}></Route>
+
+    <Route path='*' element={<Myerrorpage/>}/>
     </Routes>
     
     </BrowserRouter>

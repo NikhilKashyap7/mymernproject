@@ -29,7 +29,22 @@ function Myloginpage(){
                             <div class="mb-3">
                               <img src={logo} alt='Company logo' className='c-logo' />
                             </div>
+                            
+                           
+
+
+
                         </div>
+                        
+                        <div className='col-12 row justify-content-center'>
+                        <div className="head ">
+                            <div className="eyes">
+                                <span className="eye"></span><span className="eye"></span>
+                            </div>
+                            </div> 
+                            </div>
+
+
                         <div className='col-12'>
                             <div class="mb-3">
                                 <label class="form-label l-label">Email address</label>
