@@ -2,10 +2,10 @@ import React from 'react'
 import logo from '../images/zencode.png'
 function Myfooterpage() {
   return (
-    <footer className='footer'>
+    <footer className='footer col-12 container-fluid'>
       <div className='f-description'>
         <img src={logo} alt="Brand logo" className="brand-logo" />
-        <p>CodeSquadz, a top-tier IT training institute based in Noida, ensures 
+        <p>ZenCode, a top-tier IT training institute based in Noida, ensures 
           a bright future for both aspiring students & working professionals.
         </p>
       </div>

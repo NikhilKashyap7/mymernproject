@@ -1,18 +1,16 @@
 .footer{
     display: flex;
-    padding: 5%;
-    border: 5px solid red;
+    padding-right: 5%;
+    padding-left: 5%;
     justify-content: space-between;
     align-items: center;
-}
+    background: linear-gradient(90deg, rgba(134, 135, 142, 1) 0%, rgba(228, 41, 41, 1) 99%);}
 .f-description{
-    border: 5px solid black;
     box-sizing: border-box;
     width: 28%;
 }
 
 .f-courses{
-    border: 5px solid yellow;
     box-sizing: border-box;
     width: 28%;
 }
@@ -20,7 +18,6 @@
     display: flex;
 }
 .address{
-    border: 5px solid green;
     box-sizing: border-box;
     width: 28%;
 }

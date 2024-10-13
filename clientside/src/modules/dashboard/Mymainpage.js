@@ -2,6 +2,18 @@ import React, { Fragment, useState, useEffect } from "react";
 import carimg1 from '../images/web-feature.jpg'
 import carimg2 from '../images/website-development-process-scaled.jpg'
 import Myfooterpage from "../shares/Myfooterpage";
+import java from "../images/java-course.png";
+import python from "../images/python.png";
+import reactjs from "../images/reactjs.png";
+import dscience from "../images/data-science.png";
+import graphic from "../images/graphic.png";
+import mern from "../images/mern-logo.png";
+import mean from "../images/mean.png";
+import angular from "../images/angularjs.png";
+import digital from "../images/digital-marketing.png";
+import fullstack from "../images/spring.png";
+import cyber from "../images/cyber-security-icon.png";
+import aws from "../images/aws-icon.png"
 function Mymainpage(){
     const [slider, setSlider] = useState(0);
   const data = [
@@ -73,7 +85,107 @@ function Mymainpage(){
             <p>CodeSquadz provides career-oriented IT training on live projects from industry experts to level up your IT career through new-age tech skills.
             </p>
             
+
         </div>
+
+        <section className="course-card-main">
+          <section className="course-card">
+        <div class="card">
+  <img src={java} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h6 class="card-title">JAVA</h6>
+  </div>
+</div>
+
+<div class="card">
+  <img src={python} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h6 class="card-title">Python</h6>
+  </div>
+</div>
+
+<div class="card">
+  <img src={reactjs} class="card-img-top" alt="React Logo"/>
+  <div class="card-body">
+    <h6 class="card-title">React JS</h6>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src={dscience} class="card-img-top" alt="Data Science Logo"/>
+  <div class="card-body">
+    <h6 class="card-title">Data Science</h6>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src={graphic} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h6 class="card-title">Graphic & Video</h6>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src={mern} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h6 class="card-title">Mern</h6>
+  </div>
+</div>
+</section>
+
+
+<section className="course-card">
+<div class="card">
+  <img src={mean} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h6 class="card-title">Mean</h6>
+  </div>
+</div>
+
+<div class="card">
+  <img src={angular} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h6 class="card-title">Angular JS</h6>
+  </div>
+</div>
+
+<div class="card">
+  <img src={digital} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h6 class="card-title">Digital Marketing</h6>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src={fullstack} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h6 class="card-title">Full Stack QA</h6>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src={cyber} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h6 class="card-title">Cyber Security</h6>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src={aws} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h6 class="card-title">AWS</h6>
+  </div>
+</div>
+
+</section>
+
+        </section>
 
         <Myfooterpage/>
       </Fragment>

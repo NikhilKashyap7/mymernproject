@@ -9,7 +9,6 @@ import Mylandingpage from './modules/dashboard/Mylandingpage';
 import Myloginpage from './modules/auth/Myloginpage';
 import Myregistorpage from './modules/auth/Myregistorpage';
 import 'react-toastify/dist/ReactToastify.css';
-
 import "./css/Myheaderpage.css"
 import "./css/Myloginpage.css"
 import "./css/Myregistorpage.css"
@@ -18,9 +17,10 @@ import "./css/Myfooterpage.css"
 import "./css/Mycustomtable.css"
 import "./css/Myerrorpage.css"
 import Mycustomtable from './modules/dashboard/Mycustomtable';
-import OurStudentdata from './modules/dashboard/OurStudentdata';
-import Userdataview from './modules/dashboard/Userdataview';
 import Myerrorpage from './modules/shares/Myerrorpage';
+import Userdataview from './modules/dashboard/Userdataview';
+import OurStudentdata from './modules/dashboard/OurStudentdata';
+import Usereditpage from './modules/dashboard/Usereditpage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -32,10 +32,11 @@ root.render(
     <Route path='/Myregistorpage' element={<Myregistorpage/>} >
     </Route>
     <Route path='/ourstudentdata' element={<OurStudentdata/>}></Route>
-    <Route path='/mycustomtable' element={<Mycustomtable/>}></Route>
-    <Route path='/ourstudentdata/userview/:id' element={<Userdataview/>}></Route>
 
-    <Route path='*' element={<Myerrorpage/>}/>
+    <Route path='/Mycustomtable' element={<Mycustomtable/>}></Route>
+    <Route path='/ourstudentdata/userview/:id' element={<Userdataview/>}></Route>
+    <Route path='/ourstudentdata/edituser/:id' element={<Usereditpage/>}></Route>
+<Route path='*' element={<Myerrorpage/>}></Route>
     </Routes>
     
     </BrowserRouter>

@@ -36,13 +36,7 @@ function Myloginpage(){
 
                         </div>
                         
-                        <div className='col-12 row justify-content-center'>
-                        <div className="head ">
-                            <div className="eyes">
-                                <span className="eye"></span><span className="eye"></span>
-                            </div>
-                            </div> 
-                            </div>
+                        
 
 
                         <div className='col-12'>

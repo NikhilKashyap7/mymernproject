@@ -8,7 +8,6 @@ function OurStudentdata(){
                 <div className='col-md-12'>
                     <Mycustomtable></Mycustomtable>
                    
-
                 </div>
             </div>
 

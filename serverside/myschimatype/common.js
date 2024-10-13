@@ -19,10 +19,9 @@ const mynew = new mongoose.Schema({
     pass:{
         type:String
     },
-    gender:{ 
+    gender:{
         type:String
-    }
-        
+    }    
     
     });
     

@@ -6,7 +6,9 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import {faPenToSquare}from '@fortawesome/free-solid-svg-icons';
 import {faEye}from '@fortawesome/free-solid-svg-icons';
 import {faLeftLong}from '@fortawesome/free-solid-svg-icons';
-
+import DeleteIcon from '@mui/icons-material/Delete';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import EditIcon from '@mui/icons-material/Edit';
 
 function Mycustomtable() {
     const [user, setuser] = useState([])
@@ -57,9 +59,10 @@ function Mycustomtable() {
       <th scope="col">FullName</th>
       <th scope="col">Email Id</th>
       <th scope="col">Phone No.</th>
-      <th scope="col">Course</th>
-      <th scope="col">DOB</th>
       <th scope="col">Gender</th>
+      <th scope="col">DOB</th>
+      <th scope="col">Course</th>
+      
       <th scope="col" className="text-end">Actions</th>
     </tr>
   </thead>
@@ -71,13 +74,13 @@ function Mycustomtable() {
                             <td>{y.fullname}</td>
                             <td>{y.email}</td>
                             <td>{y.phone}</td>
-                            <td>{y.course}</td>
-                            <td>{y.dob}</td>
                             <td>{y.gender}</td>
+                            <td>{y.dob}</td>
+                            <td>{y.course}</td>
                             <td className='text-end'>
-                                <Link to="" className="badge btn edit-btn"><FontAwesomeIcon icon={faPenToSquare} /></Link>
-                                <button  className="btn badge  delete-btn" onClick={()=>deletedata(y._id)}><FontAwesomeIcon icon={faTrash} /></button>
-                                <Link to={'userview/'+y._id} className="badge  view-btn" ><FontAwesomeIcon icon={faEye} /></Link>
+                                <Link to={`edituser/`+y._id} className="badge btn edit-btn"><EditIcon/></Link>
+                                <button  className="btn badge  delete-btn" onClick={()=>deletedata(y._id)}><DeleteIcon/></button>
+                                <Link to={'userview/'+y._id} className="badge  view-btn" ><VisibilityIcon /></Link>
                             </td>
                         </tr>
                     )

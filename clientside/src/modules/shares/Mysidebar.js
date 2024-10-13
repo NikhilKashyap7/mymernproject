@@ -6,4 +6,4 @@ function Mysidebar() {
   )
 }
 
-export default Mysidebar
+export default Mysidebars

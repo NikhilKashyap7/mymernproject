@@ -1,19 +1,26 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 import logo from '../images/zencode.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Myregistorpage() {
     const navigate = useNavigate();
-
+    
+    const getEighteenYearsAgoDate = () => {
+        const today = new Date();
+        today.setFullYear(today.getFullYear() - 18); 
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0'); 
+        const dd = String(today.getDate()).padStart(2, '0');
+        return `${yyyy}-${mm}-${dd}`;
+    };
     const [user, setuser] = useState({
         email: "",
         fullname: "",
         phone: "",
-        dob: "",
+        gender: "",
+        dob: getEighteenYearsAgoDate(),
         course: "",
-        pass: "",
-        gender: ""
+        pass: ""
     });
 
     const updateuser = (a) => {
@@ -85,11 +92,11 @@ function Myregistorpage() {
                                     <div className="mb-3">
                                         <label className="form-label r-label">Gender</label><br />
                                         <div className="form-check form-check-inline">
-                                            <input className="form-check-input r-input" type="radio" name="gender" value="Male" checked={user.gender === "male"} onChange={updateuser} />
+                                            <input className="form-check-input " type="radio" name="gender" value="Male" checked={user.gender === "Male"} onChange={updateuser} />
                                             <label className="form-check-label r-label">Male</label>
                                         </div>
                                         <div className="form-check form-check-inline">
-                                            <input className="form-check-input r-input" type="radio" name="gender" value="Female" checked={user.gender === "female"} onChange={updateuser}/>
+                                            <input className="form-check-input " type="radio" name="gender" value="Female" checked={user.gender === "Female"} onChange={updateuser}/>
                                             <label className="form-check-label r-label">Female</label>
                                         </div>
 

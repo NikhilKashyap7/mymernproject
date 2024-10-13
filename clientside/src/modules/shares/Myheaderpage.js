@@ -1,5 +1,4 @@
 import React from 'react'
-import  { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/zencode.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,18 +6,15 @@ import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { faRightToBracket } from '@fortawesome/free-solid-svg-icons';
+import AddIcCallIcon from '@mui/icons-material/AddIcCall';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 function Myheaderpage() 
 {
-    
-        const [isOpen, setIsOpen] = useState(false);
-      
-        const toggleMenu = () => {
-          setIsOpen(!isOpen);}
         
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
     <div class="container-fluid ">
-      <Link to='/Mymainpage'><img src={logo} className='brand-logo' /></Link>
+      <Link to='/Mymainpage'><img src={logo} alt='Company logo' className='brand-logo' /></Link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -53,14 +49,14 @@ function Myheaderpage()
                     </ul>
           </li>
           <li><Link to='/Myloginpage' class="btn btn-custom me-2"><FontAwesomeIcon icon={faRightToBracket} />Login</Link></li>
-          <li><Link to='/ourstudentdata' class="btn btn-custom me-2">Our Student's</Link></li>
+          <li><Link to='/ourstudentdata' class="btn btn-custom me-2"><PeopleAltIcon/>Our Student's</Link></li>
 
 
         </ul>
         
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn " type="submit"><AddIcCallIcon/>Conatct Us</button>
+          
         </form>
       </div>
     </div>
