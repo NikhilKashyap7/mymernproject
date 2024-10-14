@@ -2,10 +2,10 @@ import React from 'react'
 import logo from '../images/zencode.png'
 function Myfooterpage() {
   return (
-    <footer className='footer col-12 container-fluid'>
+    <><footer className='footer col-12 container-fluid'>
       <div className='f-description'>
         <img src={logo} alt="Brand logo" className="brand-logo" />
-        <p>ZenCode, a top-tier IT training institute based in Noida, ensures 
+        <p>ZenCode, a top-tier IT training institute based in Noida, ensures
           a bright future for both aspiring students & working professionals.
         </p>
       </div>
@@ -14,16 +14,16 @@ function Myfooterpage() {
         <h4>Important Courses</h4>
         <ul className='courses-li'>
           <ul>
-          <li>Python Training</li>
-          <li>Java Training</li>
-          <li>Software Testing</li>
-          <li>ReactJS Training</li>
+            <li>Python Training</li>
+            <li>Java Training</li>
+            <li>Software Testing</li>
+            <li>ReactJS Training</li>
           </ul>
           <ul>
-          <li>AngularJS Training</li>
-          <li>MEAN Stack</li>
-          <li>MERN Stack</li>
-          <li>Digital Marketing Training</li>
+            <li>AngularJS Training</li>
+            <li>MEAN Stack</li>
+            <li>MERN Stack</li>
+            <li>Digital Marketing Training</li>
           </ul>
         </ul>
       </div>
@@ -31,14 +31,23 @@ function Myfooterpage() {
       <div className='address'>
         <h2>OFFICE ADDRESS</h2>
         <li>
-H 65, Sector 63, Block H
-Noida,Uttar Pradesh 201301
-</li>
-<li>9038490148</li>
-<li>3798471983</li>
-<li>enquiry@zencode.com</li>
+          H 65, Sector 63, Block H
+          Noida,Uttar Pradesh 201301
+        </li>
+        <li>9038490148</li>
+        <li>3798471983</li>
+        <li>enquiry@zencode.com</li>
       </div>
+
     </footer>
+    <div className='fixed-footer sticky-bottom'>
+    <button type="button" className="btn">Enquire Now</button>   
+    <button type="button" className="btn">Call Us Now</button>
+    <button type="button" className="btn">88-99-00-11-22-33</button>
+
+
+     </div>
+    </>
   )
 }
 

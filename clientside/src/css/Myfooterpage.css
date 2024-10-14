@@ -21,3 +21,13 @@
     box-sizing: border-box;
     width: 28%;
 }
+.fixed-footer{
+    height: 50px;
+    width: 100%;
+    background-color: grey;
+    justify-items: center;
+  
+}
+.footer-btn{
+    align-items: center ;
+}
