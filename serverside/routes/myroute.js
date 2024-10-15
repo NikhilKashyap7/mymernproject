@@ -49,6 +49,34 @@ myapps.patch("/edituser/:id", async (req,res)=>{
     console.log(edit);
     res.status(200).json(edit);
 })
+
+
+myapps.post("/login", async (req, res) => {
+    const { email,pass } = req.body;
+    if (email === "" || pass === "") {
+        res.status(412).json({message: "Error email and pass", status: 420});
+    }
+    else{
+        const logindetails = await myschimatype.findOne({ email: email});
+        console.log(logindetails);
+        if (logindetails) {
+            if (logindetails.email === email && logindetails.pass === pass){
+                res.status(200).json({ message:"Welcome", status: 220});
+
+            }
+            else {
+                res.status(300).json({message: " Email and apssword don't match", status: 421});
+            }
+        }
+        else{
+            res.status(300).json({message: "error", status: 620});
+         }
+    }
+});
+
+
+
+
 module.exports = myapps;
 
 

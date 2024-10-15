@@ -66,9 +66,63 @@ function Myloginpage() {
 
         alert("Successfully logged in!");
         setTimeout(() => {
-            navigate("/");
+            navigate("/mainpage");
         }, 2000);
     };
+
+
+
+    const [login,setlogin]=useState({
+        email:"",
+        pass:""
+    });
+
+    const loginuser = (e)=>{
+        console.log(e.target.value);
+        const {name,value} = e.target;
+        setlogin((a)=>{
+          return{
+            ...a,
+            [name]:value
+          }
+        })
+    }
+
+    const userlogin = async()=>{
+        const {email,pass}=login;
+        if(login.email==="" || login.pass==="")
+        {
+            alert("Email id and Password cannot be blank!");
+        }
+        else
+        {
+            const datares = await fetch("http://localhost:4707/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    email, pass
+                })
+            });
+            const resdata = await datares.json();
+            console.log(resdata);
+            if(resdata.status===220)
+            {
+                alert("Your are sucessfully logged in");
+                navigate('/');
+            }
+
+            if(resdata.status===620)
+            {
+                alert("e-mail not found");
+            }
+
+            if(resdata.status===421)
+                {
+                    alert("e-mail and Password didn't match");
+                }
+        }
+
+    }
 
 
 
@@ -90,16 +144,15 @@ function Myloginpage() {
                                 <div className='col-12'>
                                     <div class="mb-3">
                                         <label class="form-label l-label">Email address</label>
-                                        <input type="email" className="form-control l-input" {...register("email", { required: true })} />
+                                        <input type="email" className="form-control l-input" {...register("email", { required: true })} name="email" value={login.email} onInput={loginuser} />
                                         {errors.email?.type === "required" && <p className='error-code'>@email id required!</p>}
                                     </div>
                                 </div>
                                 <div className='col-12'>
                                     <div class="mb-3">
                                         <label class="form-label l-label">Password</label>
-                                        <input type="password" className="form-control l-input" {...register("password", { required: true })} />
+                                        <input type="password" className="form-control l-input" {...register("password", { required: true })} name="pass" value={login.pass} onInput={loginuser} />
                                         {errors.password?.type === "required" && <p className='error-code'>Password is required!</p>}
-
                                     </div>
                                 </div>
 
@@ -124,7 +177,7 @@ function Myloginpage() {
 
                                 <div className='col-12 text-center'>
                                     <div class="mb-3">
-                                        <button className='btn c-btn'>Login</button>
+                                        <button className='btn c-btn' type="button" onClick={userlogin}>Login</button>
                                     </div>
                                 </div>
                                 <div className='col-12 text-center'>

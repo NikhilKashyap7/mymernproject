@@ -127,7 +127,7 @@ function Usereditpage() {
                         </div>
                         <div className='col-12 text-center'>
                             <div className="mb-3 ">
-                                <button type="submit" className='btn btn-success r-btn'  onClick={changedetails}>Register Now</button>
+                                <button type="submit" className='btn btn-success r-btn'  onClick={changedetails}>Edit Now</button>
                             </div>
                         </div>
                         <div className='col-12 text-center'>

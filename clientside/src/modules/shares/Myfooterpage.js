@@ -41,9 +41,9 @@ function Myfooterpage() {
 
     </footer>
     <div className='fixed-footer sticky-bottom'>
-    <button type="button" className="btn">Enquire Now</button>   
-    <button type="button" className="btn">Call Us Now</button>
-    <button type="button" className="btn">88-99-00-11-22-33</button>
+    <button type="button" className="btn footer-btn">Enquire Now</button>   
+    <button type="button" className="btn footer-btn">Call Us Now</button>
+    <button type="button" className="btn footer-btn">88-99-00-11-22-33</button>
 
 
      </div>

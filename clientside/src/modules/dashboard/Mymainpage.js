@@ -13,7 +13,8 @@ import angular from "../images/angularjs.png";
 import digital from "../images/digital-marketing.png";
 import fullstack from "../images/spring.png";
 import cyber from "../images/cyber-security-icon.png";
-import aws from "../images/aws-icon.png"
+import aws from "../images/aws-icon.png";
+import PhoneForwardedIcon from '@mui/icons-material/PhoneForwarded';;
 function Mymainpage(){
     const [slider, setSlider] = useState(0);
   const data = [
@@ -59,6 +60,10 @@ function Mymainpage(){
           </div>
         </div>
   
+        <div id="mySidenav" class="sidenav">
+  <a href="#" id="blog"><PhoneForwardedIcon/></a>
+</div>
+
         <div className="para-1">
           <h3>Best IT Training Institute with 100% Placement Assistance</h3>
           <p>
