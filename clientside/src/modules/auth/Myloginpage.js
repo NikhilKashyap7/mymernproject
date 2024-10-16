@@ -3,12 +3,16 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from '../images/zencode.png'
 import { useForm } from 'react-hook-form';
 import 'react-toastify/dist/ReactToastify.css';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 function Myloginpage() {
     const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors }, setError } = useForm();
 
     const [captcha, setCaptcha] = useState('');
-
+    const [showPassword, setShowPassword] = useState(false);
     const generateCaptcha = () => {
         const a = Math.floor((Math.random() + 1) * 10);
         const b = Math.floor((Math.random() + 1) * 51);
@@ -72,30 +76,28 @@ function Myloginpage() {
 
 
 
-    const [login,setlogin]=useState({
-        email:"",
-        pass:""
+    const [login, setlogin] = useState({
+        email: "",
+        pass: ""
     });
 
-    const loginuser = (e)=>{
+    const loginuser = (e) => {
         console.log(e.target.value);
-        const {name,value} = e.target;
-        setlogin((a)=>{
-          return{
-            ...a,
-            [name]:value
-          }
+        const { name, value } = e.target;
+        setlogin((a) => {
+            return {
+                ...a,
+                [name]: value
+            }
         })
     }
 
-    const userlogin = async()=>{
-        const {email,pass}=login;
-        if(login.email==="" || login.pass==="")
-        {
+    const userlogin = async () => {
+        const { email, pass } = login;
+        if (login.email === "" || login.pass === "") {
             alert("Email id and Password cannot be blank!");
         }
-        else
-        {
+        else {
             const datares = await fetch("http://localhost:4707/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -105,21 +107,18 @@ function Myloginpage() {
             });
             const resdata = await datares.json();
             console.log(resdata);
-            if(resdata.status===220)
-            {
+            if (resdata.status === 220) {
                 alert("Your are sucessfully logged in");
                 navigate('/');
             }
 
-            if(resdata.status===620)
-            {
+            if (resdata.status === 620) {
                 alert("e-mail not found");
             }
 
-            if(resdata.status===421)
-                {
-                    alert("e-mail and Password didn't match");
-                }
+            if (resdata.status === 421) {
+                alert("e-mail and Password didn't match");
+            }
         }
 
     }
@@ -151,9 +150,24 @@ function Myloginpage() {
                                 <div className='col-12'>
                                     <div class="mb-3">
                                         <label class="form-label l-label">Password</label>
-                                        <input type="password" className="form-control l-input" {...register("password", { required: true })} name="pass" value={login.pass} onInput={loginuser} />
-                                        {errors.password?.type === "required" && <p className='error-code'>Password is required!</p>}
-                                    </div>
+                                        <div className="input-group">
+                                            <input
+                                                type={showPassword ? "text" : "password"} 
+                                                className="form-control l-input"
+                                                {...register("password", { required: true })}
+                                                name="pass"
+                                                value={login.pass}
+                                                onInput={loginuser}
+                                            />
+                                            <button
+                                                type="button"
+                                                className="btn"
+                                                onClick={() => setShowPassword(!showPassword)} 
+                                            >
+                                                <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} /> 
+                                            </button>
+                                        </div>                                    
+                                        </div>
                                 </div>
 
 
@@ -189,7 +203,6 @@ function Myloginpage() {
                                 <div className='col-12 text-center'>
                                     <div class="mb-3">
                                         <Link to="/Myregistorpage" className="btn c-btn">Register Now</Link>
-                                        <Link to="/" className="btn c-btn" style={{ marginTop: '5px' }}>Go Home..</Link>
                                     </div>
                                 </div>
                             </div>
