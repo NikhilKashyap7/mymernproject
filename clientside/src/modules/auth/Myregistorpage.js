@@ -38,6 +38,7 @@ function Myregistorpage() {
         const { email, fullname, phone, gender, course, dob, pass  } = user;
         if (user.email === '' || user.fullname === "" || user.pass === "") {
             alert("Please! fill inputs correctly");
+            navigate("/myregistorpage");
         }
         else {
             const res = await fetch("http://localhost:4707/registoruser", {
@@ -50,7 +51,7 @@ function Myregistorpage() {
             const data = await res.json();
             // console.log(data);
             alert("Welcome You Are Registered");
-            navigate("/loginpage");
+            navigate("/myloginpage");
         }
 
     }
@@ -132,7 +133,7 @@ function Myregistorpage() {
                                 </div>
                                 <div className='col-12 text-center'>
                                     <div className="mb-3 ">
-                                        <button type="submit" className='btn btn-success r-btn'  onClick={mysubmitdata}>Register Now</button>
+                                        <Link to="/" type="submit" className='btn btn-success r-btn'  onClick={mysubmitdata}>Register Now</Link>
                                     </div>
                                 </div>
                                 <div className='col-12 text-center'>
