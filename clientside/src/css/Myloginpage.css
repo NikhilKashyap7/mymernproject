@@ -40,8 +40,8 @@
     margin-right: 5px;
     border-radius: 10px;
 }
-.show-pass-btn{
+ .show-pass-btn{
     border: none;
-    /* background-color: transparent; */
-}
+     background-color: transparent; 
+} 
 

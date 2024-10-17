@@ -3,8 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from '../images/zencode.png'
 import { useForm } from 'react-hook-form';
 import 'react-toastify/dist/ReactToastify.css';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 function Myloginpage() {
@@ -157,14 +155,9 @@ function Myloginpage() {
                                                 {...register("password", { required: true })}
                                                 name="pass"
                                                 value={login.pass}
-                                                onInput={loginuser}
-                                            />
-                                            <button
-                                                type="button"
-                                                className="btn"
-                                                onClick={() => setShowPassword(!showPassword)} 
-                                            >
-                                                <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} /> 
+                                                onInput={loginuser}/>
+                                            <button onClick={() => setShowPassword(!showPassword)} edge="end" className="show-pass-btn" >
+                                                {showPassword ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />} 
                                             </button>
                                         </div>                                    
                                         </div>
