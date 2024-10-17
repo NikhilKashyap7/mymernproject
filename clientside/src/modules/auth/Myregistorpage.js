@@ -24,7 +24,7 @@ function Myregistorpage() {
     });
 
     const updateuser = (a) => {
-        console.log(a.target.value);
+        // console.log(a.target.value);
         const { name, value } = a.target;
         setuser((b) => {
             return {
@@ -48,9 +48,9 @@ function Myregistorpage() {
                 })
             });
             const data = await res.json();
-            console.log(data);
+            // console.log(data);
             alert("Welcome You Are Registered");
-            navigate("/");
+            navigate("/loginpage");
         }
 
     }
@@ -137,7 +137,7 @@ function Myregistorpage() {
                                 </div>
                                 <div className='col-12 text-center'>
                                     <div className="mb-3 ">
-                                        <Link to="/Myloginpage" className="btn btn-success  r-btn"  >Login</Link>
+                                        <Link to="/myloginpage" className="btn btn-success  r-btn"  >Login</Link>
                                         <Link to="/" className="btn btn-success  r-btn">Go Home..</Link>
 
                                     </div>

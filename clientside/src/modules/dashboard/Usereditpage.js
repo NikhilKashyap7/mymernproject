@@ -17,7 +17,7 @@ function Usereditpage() {
     });
 
     const edituser = (e)=>{
-        console.log(e.target.value);
+        // console.log(e.target.value);
         const {name,value} = e.target;
         setuser((a)=>{
             return{
@@ -29,7 +29,7 @@ function Usereditpage() {
 
     const userupdate = ()=>{
         axios.get(`http://localhost:4707/singleuser/${id}`).then((y)=>{
-            console.log(y);
+            // console.log(y);
             setuser(y.data);
         });
     }
@@ -47,9 +47,9 @@ function Usereditpage() {
             })
         });
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         alert("User Detail Updated");
-        navigate("/dashboard");
+        navigate("/");
     }
 
   return (
@@ -132,7 +132,7 @@ function Usereditpage() {
                         </div>
                         <div className='col-12 text-center'>
                             <div className="mb-3 ">
-                                <Link to="/Myloginpage" className="btn btn-success  r-btn"  >Login</Link>
+                                <Link to="/myloginpage" className="btn btn-success  r-btn"  >Login</Link>
                                 <Link to="/" className="btn btn-success  r-btn">Go Home..</Link>
 
                             </div>

@@ -14,7 +14,7 @@ function Myheaderpage()
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
     <div class="container-fluid ">
-      <Link to='/Mymainpage'><img src={logo} alt='Company logo' className='brand-logo' /></Link>
+      <Link to='/mymainpage'><img src={logo} alt='Company logo' className='brand-logo' /></Link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -48,7 +48,7 @@ function Myheaderpage()
                         <li><a class="dropdown-item" href="#">Angular js</a></li>
                     </ul>
           </li>
-          <li><Link to='/Myloginpage' class="btn btn-custom me-2"><FontAwesomeIcon icon={faRightToBracket} />Login</Link></li>
+          <li><Link to='/myloginpage' class="btn btn-custom me-2"><FontAwesomeIcon icon={faRightToBracket} />Login</Link></li>
           <li><Link to='/ourstudentdata' class="btn btn-custom me-2"><PeopleAltIcon/>Our Student's</Link></li>
 
 

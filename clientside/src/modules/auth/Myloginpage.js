@@ -195,7 +195,7 @@ function Myloginpage() {
 
                                 <div className='col-12 text-center'>
                                     <div class="mb-3">
-                                        <Link to="/Myregistorpage" className="btn c-btn">Register Now</Link>
+                                        <Link to="/myregistorpage" className="btn c-btn">Register Now</Link>
                                     </div>
                                 </div>
                             </div>

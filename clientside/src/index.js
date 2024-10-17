@@ -27,13 +27,13 @@ root.render(
     <BrowserRouter>
     <Routes>
     <Route path='/' element={<Mylandingpage/>} />
-    <Route path='/Mylandingpage'element={<Mymainpage/>}/>
-    <Route path='/Myloginpage' element={<Myloginpage/>}/>
-    <Route path='/Myregistorpage' element={<Myregistorpage/>} >
+    <Route path='/mylandingpage'element={<Mymainpage/>}/>
+    <Route path='/myloginpage' element={<Myloginpage/>}/>
+    <Route path='/myregistorpage' element={<Myregistorpage/>} >
     </Route>
     <Route path='/ourstudentdata' element={<OurStudentdata/>}></Route>
 
-    <Route path='/Mycustomtable' element={<Mycustomtable/>}></Route>
+    <Route path='/mycustomtable' element={<Mycustomtable/>}></Route>
     <Route path='/ourstudentdata/userview/:id' element={<Userdataview/>}></Route>
     <Route path='/ourstudentdata/edituser/:id' element={<Usereditpage/>}></Route>
 <Route path='*' element={<Myerrorpage/>}></Route>
