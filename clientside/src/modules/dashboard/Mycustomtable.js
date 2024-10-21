@@ -9,12 +9,13 @@ import {faLeftLong}from '@fortawesome/free-solid-svg-icons';
 import DeleteIcon from '@mui/icons-material/Delete';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import EditIcon from '@mui/icons-material/Edit';
+import Myapi from "../shares/Myapi";
 
 function Mycustomtable() {
     const [user, setuser] = useState([])
     const getalldata = () =>{
-        axios.get("http://localhost:4707/alldata").then((y)=> {
-            console.log(y.data);
+        axios.get(`${Myapi}/alldata`).then((y)=> {
+            // console.log(y.data);
             setuser(y.data);
         });
     }
@@ -24,8 +25,8 @@ function Mycustomtable() {
             const confirmdDelete = window.confirm("Are you sure you want to delete this user data?");
            if (confirmdDelete){
            
-            await axios.delete(`http://localhost:4707/deleterecord/${id}`).then((y)=>{
-                console.log(y);
+            await axios.delete(`${Myapi}/deleterecord/${id}`).then((y)=>{
+                // console.log(y);
                 getalldata();
                 
             });

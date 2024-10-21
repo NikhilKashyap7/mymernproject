@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Myapi from "../shares/Myapi";
 
 function Userdataview (){
     
@@ -9,7 +10,7 @@ function Userdataview (){
     const [userdetail,userset]=useState({})
 
     const singleuser= ()=>{
-        axios.get(`http://localhost:4707/singleuser/${id}`).then((y)=>{
+        axios.get(`${Myapi}/singleuser/${id}`).then((y)=>{
             console.log(y);
             userset(y.data);
         })

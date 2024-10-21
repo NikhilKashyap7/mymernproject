@@ -26,8 +26,13 @@
     width: 100%;
     background-color: grey;
     justify-items: center;
+  text-align: center;
   
 }
 .footer-btn{
     align-items: center ;
+    font-weight: 500;
+}
+.footer-btn:hover{
+    color: blue;
 }

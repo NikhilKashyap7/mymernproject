@@ -59,10 +59,10 @@ function Mymainpage(){
             </div>
           </div>
         </div>
-  
+{/*   
         <div id="mySidenav" class="sidenav">
   <a href="#" id="blog"><PhoneForwardedIcon/></a>
-</div>
+</div> */}
 
         <div className="para-1">
           <h3>Best IT Training Institute with 100% Placement Assistance</h3>

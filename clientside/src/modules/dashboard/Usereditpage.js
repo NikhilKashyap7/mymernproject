@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import logo from '../images/zencode.png'
+import Myapi from "../shares/Myapi";
 
 function Usereditpage() {
     const navigate = useNavigate();
@@ -39,7 +40,7 @@ function Usereditpage() {
 
     const changedetails = async()=>{
         const {email, fullname, course, phone, dob, pass, gender} = user;
-        const res =await fetch(`http://localhost:4707/edituser/${id}` ,{
+        const res =await fetch(`${Myapi}/edituser/${id}` ,{
             method: "PATCH",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify({

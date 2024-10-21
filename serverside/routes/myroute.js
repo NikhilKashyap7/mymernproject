@@ -6,7 +6,7 @@ myapps.get("/",(req,res)=>{
     res.send("Welcome to Express js");
 });
 
-myapps.get("/about",(req,rees)=>{
+myapps.get("/about",(req,res)=>{
     res.send("Welcome about js");
 });
 

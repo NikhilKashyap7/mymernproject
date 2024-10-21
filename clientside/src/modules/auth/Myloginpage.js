@@ -3,8 +3,13 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from '../images/zencode.png'
 import { useForm } from 'react-hook-form';
 import 'react-toastify/dist/ReactToastify.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import Myapi from "../shares/Myapi";
+import EmailIcon from '@mui/icons-material/Email';
+import LockIcon from '@mui/icons-material/Lock';
+import CachedIcon from '@mui/icons-material/Cached';
+
 function Myloginpage() {
     const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors }, setError } = useForm();
@@ -96,7 +101,7 @@ function Myloginpage() {
             alert("Email id and Password cannot be blank!");
         }
         else {
-            const datares = await fetch("http://localhost:4707/login", {
+            const datares = await fetch(`${Myapi}/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -140,14 +145,14 @@ function Myloginpage() {
 
                                 <div className='col-12'>
                                     <div class="mb-3">
-                                        <label class="form-label l-label">Email address</label>
+                                        <label class="form-label l-label"><EmailIcon/>Email address</label>
                                         <input type="email" className="form-control l-input" {...register("email", { required: true })} name="email" value={login.email} onInput={loginuser} />
                                         {errors.email?.type === "required" && <p className='error-code'>@email id required!</p>}
                                     </div>
                                 </div>
                                 <div className='col-12'>
                                     <div class="mb-3">
-                                        <label class="form-label l-label">Password</label>
+                                        <label class="form-label l-label"><LockIcon/>Password</label>
                                         <div className="input-group">
                                             <input
                                                 type={showPassword ? "text" : "password"} 
@@ -165,8 +170,9 @@ function Myloginpage() {
 
 
                                 <div className='col-3'>
-                                    <div className="mb-3">
+                                    <div className="mb-3 d-flex">
                                         <div className="form-control " style={{ fontWeight: "bold" }}>{captcha}</div>
+                                        <div><CachedIcon/></div>
                                     </div>
                                 </div>
 
