@@ -8,6 +8,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import GirlIcon from '@mui/icons-material/Girl';
 import BoyIcon from '@mui/icons-material/Boy';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import DateRangeIcon from '@mui/icons-material/DateRange';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 function Myregistorpage() {
@@ -51,7 +52,7 @@ function Myregistorpage() {
 
         if (pass !== confirmpass) {
             alert("!Password didn't Match");
-            return;
+            navigate("/myregistorage")
         }
 
         if (user.email === '' || user.fullname === "" || user.pass === "") {
@@ -125,7 +126,7 @@ function Myregistorpage() {
                                 </div>
                                 <div className='col-md-6'>
                                     <div className="mb-3">
-                                        <label className="form-label r-label">DOB</label>
+                                        <label className="form-label r-label"><DateRangeIcon/>DOB</label>
                                         <input type="date" className="form-control r-input" name='dob' value={user.dob} onInput={updateuser} />
 
                                     </div>
