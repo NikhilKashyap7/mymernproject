@@ -16,9 +16,15 @@
   } */
 .registor{
     background-color: rgba(114, 241, 246, 0.5);
-
-    /* backdrop-filter: blur(15px); */
     border: 2px solid rgba(255,255,255,.5);
+    border-radius: 10px;
+    margin-top: auto;
+}
+.r-logo{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 .r-label{
     color: white;
@@ -29,6 +35,7 @@
     padding: 10px 50px;
     margin-right: 5px;
     color: #fff;
+    transition: all 0.3s ease;
 }
 .r-btn:hover{
     background: linear-gradient(360deg, #d2582b, #001f03);
@@ -44,4 +51,27 @@
     background: rgba(237, 237, 237, 0.1);
     border: none;
    
+}
+
+@media (max-width: 576px) {
+    .r-wrapper{
+        padding: 20px;
+    }
+    .r-btn{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .form-control, .from-select {
+        width: 100%;
+        padding: 10px;
+    }
+    .registor{
+        padding: 10px;
+        width: 100%;
+    }
+    .r-logo{
+        max-width: 70%;
+        height: auto;
+        margin-top: 150px;
+    }
 }

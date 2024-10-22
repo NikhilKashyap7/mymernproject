@@ -169,7 +169,7 @@ function Myloginpage() {
                                 </div>
 
 
-                                <div className='col-3'>
+                                <div className='col-4'>
                                     <div className="mb-3 d-flex">
                                         <div className="form-control " style={{ fontWeight: "bold" }}>{captcha}</div>
                                         <div><CachedIcon/></div>

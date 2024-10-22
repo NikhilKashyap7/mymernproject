@@ -83,34 +83,34 @@ function Myregistorpage() {
         <form className='r-wrapper'>
             <div className='container'>
                 <div className='row justify-content-center'>
-                    <div className='col-md-8 p-3 rounded shadow registor'>
+                    <div className='col-md-6 col-sm-12 p-3 rounded shadow registor'>
                         <div className='container-fluid'>
                             <div className='row'>
-                                <div className='col-12 text-center'>
-                                    <div className='mb-3'>
-                                        <img src={logo} alt='company logo' className='c-logo' />
+                                <div className='col-md-12 text-center'>
+                                    <div className='mb-3 '>
+                                        <img src={logo} alt='company logo' className='r-logo' />
                                     </div>
                                 </div>
-                                <div className='col-md-6'>
+                                <div className='col-md-6 col-sm-12'>
                                     <div className="mb-3">
                                         <label className="form-label r-label"><EmailIcon />Email address</label>
                                         <input type="email" className="form-control r-input" name='email' value={user.email} onInput={updateuser} />
 
                                     </div>
                                 </div>
-                                <div className='col-md-6'>
+                                <div className='col-md-6 col-sm-12'>
                                     <div className="mb-3">
                                         <label className="form-label r-label">FullName</label>
                                         <input type="text" className="form-control r-input" name='fullname' value={user.fullname} onInput={updateuser} />
                                     </div>
                                 </div>
-                                <div className='col-md-6'>
+                                <div className='col-md-6 col-sm-12'>
                                     <div className="mb-3">
                                         <label className="form-label r-label"><LocalPhoneIcon />Phone No</label>
                                         <input type="text" className="form-control r-input" name='phone' value={user.phone} onInput={updateuser} />
                                     </div>
                                 </div>
-                                <div className='col-md-6'>
+                                <div className='col-md-6 col-sm-12'>
                                     <div className="mb-3">
                                         <label className="form-label r-label">Gender</label><br />
                                         <div className="form-check form-check-inline">
@@ -124,14 +124,14 @@ function Myregistorpage() {
 
                                     </div>
                                 </div>
-                                <div className='col-md-6'>
+                                <div className='col-md-6 col-sm-12'>
                                     <div className="mb-3">
                                         <label className="form-label r-label"><DateRangeIcon/>DOB</label>
                                         <input type="date" className="form-control r-input" name='dob' value={user.dob} onInput={updateuser} />
 
                                     </div>
                                 </div>
-                                <div className='col-md-6'>
+                                <div className='col-md-6 col-sm-12'>
                                     <div className="mb-3">
                                         <label className="form-label r-label">Course</label>
                                         <select className='form-select r-input' name='course' value={user.course} onChange={updateuser}>
@@ -145,7 +145,7 @@ function Myregistorpage() {
 
                                     </div>
                                 </div>
-                                <div className='col-md-6'>
+                                <div className='col-md-6 col-sm-12'>
                                     <div className="mb-3">
                                         <label className="form-label r-label"><LockIcon />Password</label>
                                         <input type={showPassword ? "text" : "password"} className="form-control r-input" name='pass' value={user.pass} onInput={updateuser} />
@@ -156,7 +156,7 @@ function Myregistorpage() {
                                     </div>
                                 </div>
 
-                                <div className='col-md-6'>
+                                <div className='col-md-6 col-sm-12'>
                                     <div className="mb-3">
                                         <label className="form-label r-label"><LockIcon /> Confirm Password</label>
                                         <input type={showConfirmPassword ? "text" : "password"} className="form-control r-input" name='confirmpass' value={user.confirmpass} onInput={updateuser} />
