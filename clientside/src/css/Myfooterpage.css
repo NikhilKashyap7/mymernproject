@@ -1,38 +1,74 @@
-.footer{
+.footer {
     display: flex;
     padding-right: 5%;
     padding-left: 5%;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, rgba(134, 135, 142, 1) 0%, rgba(228, 41, 41, 1) 99%);}
-.f-description{
+    background: linear-gradient(90deg, rgba(134, 135, 142, 1) 0%, rgba(228, 41, 41, 1) 99%);
+}
+
+.f-description {
     box-sizing: border-box;
     width: 28%;
 }
 
-.f-courses{
+.f-courses {
     box-sizing: border-box;
     width: 28%;
 }
-.courses-li{
+
+.courses-li {
     display: flex;
 }
-.address{
-    box-sizing: border-box;
+
+.address {
     width: 28%;
 }
-.fixed-footer{
+
+.fixed-footer {
     height: 50px;
     width: 100%;
     background-color: grey;
     justify-items: center;
-  text-align: center;
-  
+    text-align: center;
+
 }
-.footer-btn{
-    align-items: center ;
+
+.footer-btn {
+    align-items: center;
     font-weight: 500;
 }
-.footer-btn:hover{
+
+.footer-btn:hover {
     color: blue;
+}
+
+@media (max-width: 576px) {
+    .brand-logo{
+        width: 100%;
+    }
+    .f-description p {
+        display: none;
+    }
+
+    .address {
+        width: auto;
+        text-align: left;
+        list-style-type: none;
+    }
+
+    .footer {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .f-courses {
+        display: none;
+        width: auto;
+        text-align: center;
+        list-style-type: none;
+    }
+
+
+
 }

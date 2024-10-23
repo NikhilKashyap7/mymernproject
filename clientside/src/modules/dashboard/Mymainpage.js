@@ -92,57 +92,58 @@ function Mymainpage(){
             
 
         </div>
-
-        <section className="course-card-main">
-          <section className="course-card">
-        <div class="card">
-  <img src={java} class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <h6 class="card-title">JAVA</h6>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+            <section className="course-card">
+          
+          <div class="card">
+    <img src={java} class="card-img-top" alt="..."/>
+    <div class="card-body">
+      <h6 class="card-title">JAVA</h6>
+    </div>
   </div>
-</div>
-
-<div class="card">
-  <img src={python} class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <h6 class="card-title">Python</h6>
+  
+  <div class="card">
+    <img src={python} class="card-img-top" alt="..."/>
+    <div class="card-body">
+      <h6 class="card-title">Python</h6>
+    </div>
   </div>
-</div>
-
-<div class="card">
-  <img src={reactjs} class="card-img-top" alt="React Logo"/>
-  <div class="card-body">
-    <h6 class="card-title">React JS</h6>
+  
+  <div class="card">
+    <img src={reactjs} class="card-img-top" alt="React Logo"/>
+    <div class="card-body">
+      <h6 class="card-title">React JS</h6>
+    </div>
   </div>
-</div>
-
-
-<div class="card">
-  <img src={dscience} class="card-img-top" alt="Data Science Logo"/>
-  <div class="card-body">
-    <h6 class="card-title">Data Science</h6>
+  
+  
+  <div class="card">
+    <img src={dscience} class="card-img-top" alt="Data Science Logo"/>
+    <div class="card-body">
+      <h6 class="card-title">Data Science</h6>
+    </div>
   </div>
-</div>
-
-
-<div class="card">
-  <img src={graphic} class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <h6 class="card-title">Graphic & Video</h6>
+  
+  
+  <div class="card">
+    <img src={graphic} class="card-img-top" alt="..."/>
+    <div class="card-body">
+      <h6 class="card-title">Graphic & Video</h6>
+    </div>
   </div>
-</div>
-
-
-<div class="card">
-  <img src={mern} class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <h6 class="card-title">Mern</h6>
+  
+  
+  <div class="card">
+    <img src={mern} class="card-img-top" alt="..."/>
+    <div class="card-body">
+      <h6 class="card-title">Mern</h6>
+    </div>
   </div>
-</div>
-</section>
-
-
-<section className="course-card">
+  </section>
+  
+  <section className="course-card">
 <div class="card">
   <img src={mean} class="card-img-top" alt="..."/>
   <div class="card-body">
@@ -188,9 +189,14 @@ function Mymainpage(){
   </div>
 </div>
 
-</section>
 
-        </section>
+</section>
+  
+            </div>
+          </div>
+        </div>
+
+        
 
         <Myfooterpage/>
       </Fragment>

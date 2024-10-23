@@ -1,5 +1,8 @@
 import React from 'react'
-import logo from '../images/zencode.png'
+import logo from '../images/zencode.png';
+import BusinessIcon from '@mui/icons-material/Business';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
 function Myfooterpage() {
   return (
     <><footer className='footer col-12 container-fluid'>
@@ -31,12 +34,12 @@ function Myfooterpage() {
       <div className='address'>
         <h2>OFFICE ADDRESS</h2>
         <li>
-          H 65, Sector 63, Block H
+         <BusinessIcon/> H 65, Sector 63, Block H
           Noida,Uttar Pradesh 201301
         </li>
-        <li>9038490148</li>
-        <li>3798471983</li>
-        <li>enquiry@zencode.com</li>
+        <li><PhoneIcon/>9038490148</li>
+        <li><PhoneIcon/>3798471983</li>
+        <li><EmailIcon/>enquiry@zencode.com</li>
       </div>
 
     </footer>
