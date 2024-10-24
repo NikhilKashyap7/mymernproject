@@ -14,7 +14,6 @@ import digital from "../images/digital-marketing.png";
 import fullstack from "../images/spring.png";
 import cyber from "../images/cyber-security-icon.png";
 import aws from "../images/aws-icon.png";
-import PhoneForwardedIcon from '@mui/icons-material/PhoneForwarded';;
 function Mymainpage(){
     const [slider, setSlider] = useState(0);
   const data = [
@@ -100,21 +99,21 @@ function Mymainpage(){
           <div class="card">
     <img src={java} class="card-img-top" alt="..."/>
     <div class="card-body">
-      <h6 class="card-title">JAVA</h6>
+      <h6 className="card-title cardtext">JAVA</h6>
     </div>
   </div>
   
   <div class="card">
     <img src={python} class="card-img-top" alt="..."/>
     <div class="card-body">
-      <h6 class="card-title">Python</h6>
+      <h6 className="card-title cardtext">Python</h6>
     </div>
   </div>
   
   <div class="card">
     <img src={reactjs} class="card-img-top" alt="React Logo"/>
     <div class="card-body">
-      <h6 class="card-title">React JS</h6>
+      <h6 className="card-title cardtext">React JS</h6>
     </div>
   </div>
   
@@ -122,7 +121,7 @@ function Mymainpage(){
   <div class="card">
     <img src={dscience} class="card-img-top" alt="Data Science Logo"/>
     <div class="card-body">
-      <h6 class="card-title">Data Science</h6>
+      <h6 className="card-title cardtext">Data Science</h6>
     </div>
   </div>
   
@@ -130,7 +129,7 @@ function Mymainpage(){
   <div class="card">
     <img src={graphic} class="card-img-top" alt="..."/>
     <div class="card-body">
-      <h6 class="card-title">Graphic & Video</h6>
+      <h6 className="card-title cardtext">Graphic & Video</h6>
     </div>
   </div>
   
@@ -138,7 +137,7 @@ function Mymainpage(){
   <div class="card">
     <img src={mern} class="card-img-top" alt="..."/>
     <div class="card-body">
-      <h6 class="card-title">Mern</h6>
+      <h6 className="card-title cardtext">Mern</h6>
     </div>
   </div>
   </section>
@@ -147,21 +146,21 @@ function Mymainpage(){
 <div class="card">
   <img src={mean} class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h6 class="card-title">Mean</h6>
+    <h6 className="card-title cardtext">Mean</h6>
   </div>
 </div>
 
 <div class="card">
   <img src={angular} class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h6 class="card-title">Angular JS</h6>
+    <h6 className="card-title cardtext">Angular JS</h6>
   </div>
 </div>
 
 <div class="card">
   <img src={digital} class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h6 class="card-title">Digital Marketing</h6>
+    <h6 className="card-title cardtext">Digital Marketing</h6>
   </div>
 </div>
 
@@ -169,7 +168,7 @@ function Mymainpage(){
 <div class="card">
   <img src={fullstack} class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h6 class="card-title">Full Stack QA</h6>
+    <h6 className="card-title cardtext">Full Stack QA</h6>
   </div>
 </div>
 
@@ -177,7 +176,7 @@ function Mymainpage(){
 <div class="card">
   <img src={cyber} class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h6 class="card-title">Cyber Security</h6>
+    <h6 className="card-title cardtext">Cyber Security</h6>
   </div>
 </div>
 
@@ -185,7 +184,7 @@ function Mymainpage(){
 <div class="card">
   <img src={aws} class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h6 class="card-title">AWS</h6>
+    <h6 className="card-title cardtext">AWS</h6>
   </div>
 </div>
 
