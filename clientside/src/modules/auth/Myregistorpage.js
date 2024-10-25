@@ -4,13 +4,13 @@ import logo from '../images/zencode.png'
 import Myapi from "../shares/Myapi";
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
-// import CachedIcon from '@mui/icons-material/Cached';
 import GirlIcon from '@mui/icons-material/Girl';
 import BoyIcon from '@mui/icons-material/Boy';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import DateRangeIcon from '@mui/icons-material/DateRange';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import Myheader from'../shares/Myheaderpage';
 function Myregistorpage() {
     const navigate = useNavigate();
 
@@ -79,8 +79,9 @@ function Myregistorpage() {
 
 
     return (
-
-        <form className='r-wrapper'>
+         <>
+         <Myheader />
+         <form className='r-wrapper'>
             <div className='container'>
                 <div className='row justify-content-center'>
                     <div className='col-md-6 col-sm-12 p-3 rounded shadow registor'>
@@ -126,7 +127,7 @@ function Myregistorpage() {
                                 </div>
                                 <div className='col-md-6 col-sm-12'>
                                     <div className="mb-3">
-                                        <label className="form-label r-label"><DateRangeIcon/>DOB</label>
+                                        <label className="form-label r-label"><DateRangeIcon />DOB</label>
                                         <input type="date" className="form-control r-input" name='dob' value={user.dob} onInput={updateuser} />
 
                                     </div>
@@ -149,7 +150,7 @@ function Myregistorpage() {
                                     <div className="mb-3">
                                         <label className="form-label r-label"><LockIcon />Password</label>
                                         <input type={showPassword ? "text" : "password"} className="form-control r-input" name='pass' value={user.pass} onInput={updateuser} />
-                                        <button type='button' onClick={() => setShowPassword(!showPassword)} edge="end" className="show-pass-btn" >
+                                        <button type='button' onClick={() => setShowPassword(!showPassword)} edge="end" className="show-pass-btn">
 
                                             {showPassword ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
                                         </button>
@@ -160,7 +161,7 @@ function Myregistorpage() {
                                     <div className="mb-3">
                                         <label className="form-label r-label"><LockIcon /> Confirm Password</label>
                                         <input type={showConfirmPassword ? "text" : "password"} className="form-control r-input" name='confirmpass' value={user.confirmpass} onInput={updateuser} />
-                                        <button type='button' onClick={() => setShowConfirmPassword(!showConfirmPassword)} edge="end" className="show-pass-btn" >
+                                        <button type='button' onClick={() => setShowConfirmPassword(!showConfirmPassword)} edge="end" className="show-pass-btn">
 
                                             {showConfirmPassword ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
                                         </button>
@@ -175,9 +176,7 @@ function Myregistorpage() {
                                 <div className='col-12 text-center'>
                                     <div className="mb-3 ">
 
-                                        <Link to="/myloginpage" className="btn btn-success  r-btn"  >Login</Link>
-                                        <Link to="/" className="btn btn-success  r-btn">Go Home..</Link>
-
+                                        <Link to="/myloginpage" className="btn btn-success  r-btn">Login</Link>
                                     </div>
                                 </div>
                             </div>
@@ -185,7 +184,7 @@ function Myregistorpage() {
                     </div>
                 </div>
             </div>
-        </form>
+        </form></>
     )
 }
 

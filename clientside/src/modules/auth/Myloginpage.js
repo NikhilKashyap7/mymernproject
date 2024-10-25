@@ -9,9 +9,13 @@ import Myapi from "../shares/Myapi";
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import CachedIcon from '@mui/icons-material/Cached';
-
+import Myheader from '../shares/Myheaderpage';
+import { useDispatch, useSelector } from "react-redux";
+import { increment} from '../reduxpage/Myaction';
 function Myloginpage() {
     const navigate = useNavigate();
+    const count = useSelector((state)=> state.counter.username)
+    const dispatch = useDispatch()
     const { register, handleSubmit, formState: { errors }, setError } = useForm();
 
     const [captcha, setCaptcha] = useState('');
@@ -71,10 +75,6 @@ function Myloginpage() {
         }
 
 
-        alert("Successfully logged in!");
-        setTimeout(() => {
-            navigate("/mainpage");
-        }, 2000);
     };
 
 
@@ -110,9 +110,13 @@ function Myloginpage() {
             });
             const resdata = await datares.json();
             console.log(resdata);
+            
+       
+        
             if (resdata.status === 220) {
                 alert("Your are sucessfully logged in");
                 navigate('/');
+                dispatch(increment(resdata))
             }
 
             if (resdata.status === 620) {
@@ -129,6 +133,8 @@ function Myloginpage() {
 
 
     return (
+        <>
+        <Myheader/>
         <form className="wrapper" onSubmit={handleSubmit(mysubmit)}>
             <div className='container'>
                 <div className='row justify-content-center'>
@@ -145,34 +151,34 @@ function Myloginpage() {
 
                                 <div className='col-12'>
                                     <div class="mb-3">
-                                        <label class="form-label l-label"><EmailIcon/>Email address</label>
+                                        <label class="form-label l-label"><EmailIcon />Email address</label>
                                         <input type="email" className="form-control l-input" {...register("email", { required: true })} name="email" value={login.email} onInput={loginuser} />
                                         {errors.email?.type === "required" && <p className='error-code'>@email id required!</p>}
                                     </div>
                                 </div>
                                 <div className='col-12'>
                                     <div class="mb-3">
-                                        <label class="form-label l-label"><LockIcon/>Password</label>
+                                        <label class="form-label l-label"><LockIcon />Password</label>
                                         <div className="input-group">
                                             <input
-                                                type={showPassword ? "text" : "password"} 
+                                                type={showPassword ? "text" : "password"}
                                                 className="form-control l-input"
                                                 {...register("password", { required: true })}
                                                 name="pass"
                                                 value={login.pass}
-                                                onInput={loginuser}/>
-                                            <button onClick={() => setShowPassword(!showPassword)} edge="end" className="show-pass-btn" >
-                                                {showPassword ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />} 
+                                                onInput={loginuser} />
+                                            <button onClick={() => setShowPassword(!showPassword)} edge="end" className="show-pass-btn">
+                                                {showPassword ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
                                             </button>
-                                        </div>                                    
                                         </div>
+                                    </div>
                                 </div>
 
 
                                 <div className='col-4'>
                                     <div className="mb-3 d-flex">
                                         <div className="form-control " style={{ fontWeight: "bold" }}>{captcha}</div>
-                                        <div><CachedIcon/></div>
+                                        <div><CachedIcon /></div>
                                     </div>
                                 </div>
 
@@ -182,8 +188,7 @@ function Myloginpage() {
                                         <input
                                             type="text"
                                             className="form-control l-input"
-                                            {...register("captcha", { required: true })}
-                                        />
+                                            {...register("captcha", { required: true })} />
                                         {errors.captcha && <p className='error-code'>{errors.captcha.message || "Captcha is required!"}</p>}
                                     </div>
                                 </div>
@@ -210,7 +215,7 @@ function Myloginpage() {
                     </div>
                 </div>
             </div>
-        </form>
+        </form></>
     )
 }
 

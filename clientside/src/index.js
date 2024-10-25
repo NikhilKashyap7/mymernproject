@@ -21,9 +21,14 @@ import Myerrorpage from './modules/shares/Myerrorpage';
 import Userdataview from './modules/dashboard/Userdataview';
 import OurStudentdata from './modules/dashboard/OurStudentdata';
 import Usereditpage from './modules/dashboard/Usereditpage';
+import { Provider } from 'react-redux';
+import { store } from './modules/reduxpage/Mystore';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <BrowserRouter>
     <Routes>
     <Route path='/' element={<Mylandingpage/>} />
@@ -40,6 +45,7 @@ root.render(
     </Routes>
     
     </BrowserRouter>
+    </Provider>
     
   </React.StrictMode>
 );

@@ -1,11 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import {Link} from 'react-router-dom';
 import axios from "axios";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import {faPenToSquare}from '@fortawesome/free-solid-svg-icons';
-import {faEye}from '@fortawesome/free-solid-svg-icons';
-import {faLeftLong}from '@fortawesome/free-solid-svg-icons';
 import DeleteIcon from '@mui/icons-material/Delete';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import EditIcon from '@mui/icons-material/Edit';
@@ -39,7 +34,6 @@ function Mycustomtable() {
 
     return (
         <Fragment>
-            <Link to="/" className="homepage-btn"><FontAwesomeIcon icon={faLeftLong} fade /></Link>
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col mt-3'>

@@ -61,7 +61,7 @@ myapps.post("/login", async (req, res) => {
         // console.log(logindetails);
         if (logindetails) {
             if (logindetails.email === email && logindetails.pass === pass){
-                res.status(200).json({ message:"Welcome", status: 220});
+                res.status(200).json({ message:"Welcome", status: 220, logindata:logindetails});
 
             }
             else {

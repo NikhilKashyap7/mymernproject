@@ -41,6 +41,7 @@ function Mymainpage(){
         <div className="slider">
           <div className="slider-img">
             <img
+              className="carousel-img"
               src={data[slider].image}
               alt={`Slide ${slider + 1}`}
               style={{ width: "100%", height: "100vh" }}/>

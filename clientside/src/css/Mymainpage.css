@@ -113,6 +113,15 @@ transform: scale(1.1);
     .card-img-top{
         margin-top: 10px;
     }
+    .carousel-img{
+        height: 400px !important;
+    }
+    .slider-button{
+        padding: 2px 4px;
+        font-size: 12px;
+        bottom: 10%;
+
+    }
 }
 
 
