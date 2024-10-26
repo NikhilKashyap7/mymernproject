@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
 .wrapper{  
     height: 100vh;
     margin: 0; 
@@ -44,4 +44,27 @@
     border: none;
      background-color: transparent; 
 } 
+.captcha{
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+}
+.captcha-reload{
+    background-color: transparent;
+    margin-left: 2%;
+    border: none;
+}
+.captcha-reload:hover{
+    animation: twist 1s ease;
+}
+@keyframes twist {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
 

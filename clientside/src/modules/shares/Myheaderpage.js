@@ -9,11 +9,9 @@ import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { faRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import Person4Icon from '@mui/icons-material/Person4';
 function Myheaderpage() 
 {
       const vusername = useSelector((state)=> state.counter.username);
-      const vemail = useSelector((state)=> state.counter.email);
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top">
     <div className="container-fluid ">
@@ -56,7 +54,7 @@ function Myheaderpage()
 
 
         </ul>
-        <span style={{display:"block", width:"250px"}}><Person4Icon/> {vusername}</span>
+        <span style={{display:"block", width:"250px"}}> {vusername}</span>
         <form className="d-flex" role="search">
           <button className="btn " type="submit"><AddIcCallIcon/>Conatct Us</button>
           
