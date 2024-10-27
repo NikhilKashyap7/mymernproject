@@ -1,6 +1,8 @@
 import React from "react";
 import Mycustomtable from "./Mycustomtable";
 import Myheader from "../shares/Myheaderpage";
+import CourseChart from "../shares/Mychartdata";
+
 function OurStudentdata(){
 
     return(
@@ -17,6 +19,11 @@ function OurStudentdata(){
 
 
         </div>
+        <div>
+            <h1>This is chart data of students
+            </h1>
+                <CourseChart />
+            </div>
         </>
     )
 }

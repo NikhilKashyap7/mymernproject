@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Myapi from "../shares/Myapi";
-
 function Userdataview (){
     
     const {id} = useParams();
@@ -19,7 +18,7 @@ function Userdataview (){
     useEffect(()=>{
         singleuser();},[]);
     return(
-        <div className="container-fluid">
+        <><div className="container-fluid">
             <div className="row">
                 <div className="col-12">
                     <h1>Your are viewing single data of user</h1>
@@ -31,10 +30,12 @@ function Userdataview (){
                     <p> Gender: {userdetail.gender}</p>
                     <p> E.mail: {userdetail.email}</p>
                     <p> Phone no.: {userdetail.phone}</p>
-                    
+
                 </div>
             </div>
         </div>
+       
+            </>
     )
 }
 

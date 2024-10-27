@@ -24,10 +24,10 @@ function Myloginpage() {
     const [showPassword, setShowPassword] = useState(false);
     const generateCaptcha = () => {
         const a = Math.floor((Math.random() + 1) * 10);
-        const b = Math.floor((Math.random() + 1) * 51);
+        const b = Math.floor((Math.random() + 1) * 20);
 
-       const y = a >= 8 ? "E" : a>= 6 ? "C" : a>= 4 ? "R" : a>= 2 ? "A" : "p";
-       const z = a >= 40 ? "#" : b > 35 ? "$" : "@";
+       const y = a >= 15 ? "E" : a>= 10 ? "C" : a>= 6 ? "R" : a>= 4 ? "A" : "p";
+       const z = b >= 40 ? "#" : b >= 30 ? "$" : b >= 20 ? "@" : "&";
         return `${a}${y}${b}${z}`;
     };
 
