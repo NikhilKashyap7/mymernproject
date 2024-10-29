@@ -17,6 +17,7 @@ import "./css/Myfooterpage.css"
 import "./css/Mycustomtable.css"
 import "./css/Myerrorpage.css"
 import "./css/Modal.css"
+import "./css/Cardcarousel.css"
 import Mycustomtable from './modules/dashboard/Mycustomtable';
 import Myerrorpage from './modules/shares/Myerrorpage';
 import Userdataview from './modules/dashboard/Userdataview';

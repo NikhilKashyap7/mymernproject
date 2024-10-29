@@ -5,5 +5,8 @@ export const store = configureStore ({
     reducer: {
         counter: myactionlist,
     },
+    logout: (state)=> {
+        state.username = null;
+    }
 
 })

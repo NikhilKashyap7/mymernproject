@@ -2,22 +2,23 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Myapi from "../shares/Myapi";
-function Userdataview (){
-    
-    const {id} = useParams();
+function Userdataview() {
 
-    const [userdetail,userset]=useState({})
+    const { id } = useParams();
 
-    const singleuser= ()=>{
-        axios.get(`${Myapi}/singleuser/${id}`).then((y)=>{
+    const [userdetail, userset] = useState({})
+
+    const singleuser = () => {
+        axios.get(`${Myapi}/singleuser/${id}`).then((y) => {
             console.log(y);
             userset(y.data);
         })
     }
 
-    useEffect(()=>{
-        singleuser();},[]);
-    return(
+    useEffect(() => {
+        singleuser();
+    }, [id]);
+    return (
         <><div className="container-fluid">
             <div className="row">
                 <div className="col-12">
@@ -34,8 +35,8 @@ function Userdataview (){
                 </div>
             </div>
         </div>
-       
-            </>
+
+        </>
     )
 }
 

@@ -23,7 +23,7 @@ myapps.post("/registoruser",async(req,res)=>{
     });
     await adduser.save();
     res.status(200).json(adduser);
-    console.log(adduser);
+    // console.log(adduser);
 
 
 });

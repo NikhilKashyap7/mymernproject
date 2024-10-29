@@ -13,10 +13,6 @@ myapps.use(cors());
 myapps.use(myroute)
 
 
-// myapps.get("/",(req,res)=>{
-//     res.send("A very warm welcome to my project");
-// });
-
 myapps.listen(myport,()=>{
     console.log(`The Server is running at port no. : ${myport}`)
 })
