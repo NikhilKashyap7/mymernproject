@@ -51,9 +51,9 @@ function Cardcarousel(){
             {data.map((d, index) => (
                 <>
 
-                <div key={index} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", backgroundColor: "white", padding: "20px", borderRadius: "12px", boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}>
+                <div key={index}className="card-img" style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", backgroundColor: "white", padding: "20px", borderRadius: "12px", boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}>
                     <div  style={{ marginBottom: "16px", display: "flex", justifyContent: "center" }}>
-                    <img src={d.img} alt="" style={{ height: "180px", width: "180px", borderRadius: "50%" }}/>
+                    <img src={d.img} className="card-img" alt={d.name} style={{ height: "180px", width: "180px", borderRadius: "50%" }}/>
                 </div>
                 <div className=" card-name ">
                     <h6 className="font-bold text-lg">{d.name}</h6>
