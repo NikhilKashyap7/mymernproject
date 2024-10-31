@@ -19,7 +19,9 @@
 
 .courses-li {
     display: flex;
+    position: relative;
 }
+
 
 .address {
     width: 28%;

@@ -31,7 +31,7 @@ function Myregistorpage() {
         phone: "",
         gender: "",
         dob: getEighteenYearsAgoDate(),
-        course: "",
+        course: "Mean",
         pass: "",
         confirmpass: ""
     });
@@ -47,20 +47,30 @@ function Myregistorpage() {
         })
     }
 
-    const mysubmitdata = async () => {
+    const mysubmitdata = async (e) => {
+        e.preventDefault();
         const { email, fullname, phone, gender, course, dob, pass, confirmpass } = user;
 
+        const emailValid = /^[a-zA-Z0-9._%+-]+@gmail.com$/;
+        if(!emailValid.test(email)){
+            alert("!Please write a valid email-id")
+            return;
+        }
+        const phoneValid = /^\d{10}$/;
+        if (!phoneValid.test(phone)){
+            alert("Please enter a valid 10-Digit phone number,")
+            return;
+
+        }
         if (pass !== confirmpass) {
             alert("!Password didn't Match");
-            navigate("/myregistorage")
+            return;
         }
 
         if (user.email === '' || user.fullname === "" || user.pass === "") {
             alert("Please! fill inputs correctly");
-            navigate("/myregistorpage");
+            return;
         }
-
-
 
         else {
             const res = await fetch(`${Myapi}/registoruser`, {
@@ -74,14 +84,14 @@ function Myregistorpage() {
             console.log(data);
             alert("Welcome You Are Registered");
             navigate("/myloginpage");
-        }
+        };
     }
 
 
     return (
          <>
          <Myheader />
-         <form className='r-wrapper'>
+         <form className='r-wrapper' onSubmit={mysubmitdata}>
             <div className='container'>
                 <div className='row justify-content-center'>
                     <div className='col-md-6 col-sm-12 p-3 rounded shadow registor'>
@@ -170,7 +180,7 @@ function Myregistorpage() {
 
                                 <div className='col-12 text-center'>
                                     <div className="mb-3 ">
-                                        <Link to="/" type="submit" className='btn btn-success r-btn' onClick={mysubmitdata}>Register Now</Link>
+                                        <Link to="/myregistorpage" type="submit" className='btn btn-success r-btn' onClick={mysubmitdata}>Register Now</Link>
                                     </div>
                                 </div>
                                 <div className='col-12 text-center'>
