@@ -25,7 +25,7 @@ function Myheaderpage()
             <Link to="/"className="nav-link active"  aria-current="page" href="#"><FontAwesomeIcon icon={faHouse} />Home</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" ><FontAwesomeIcon icon={faLocationDot} />Placement</Link>
+            <Link to='/myplacement' className="nav-link" ><FontAwesomeIcon icon={faLocationDot} />Placement</Link>
           </li>
           <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"

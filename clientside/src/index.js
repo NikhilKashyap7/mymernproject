@@ -18,6 +18,7 @@ import "./css/Mycustomtable.css"
 import "./css/Myerrorpage.css"
 import "./css/Modal.css"
 import "./css/Cardcarousel.css"
+import "./css/Myplacement.css"
 import Mycustomtable from './modules/dashboard/Mycustomtable';
 import Myerrorpage from './modules/shares/Myerrorpage';
 import Userdataview from './modules/dashboard/Userdataview';
@@ -25,6 +26,7 @@ import OurStudentdata from './modules/dashboard/OurStudentdata';
 import Usereditpage from './modules/dashboard/Usereditpage';
 import { Provider } from 'react-redux';
 import { store } from './modules/reduxpage/Mystore';
+import Myplacement from './modules/shares/Myplacement';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -38,6 +40,7 @@ root.render(
     <Route path='/myloginpage' element={<Myloginpage/>}/>
     <Route path='/myregistorpage' element={<Myregistorpage/>} >
     </Route>
+    <Route path='/myplacement' element={<Myplacement/>}></Route>
     <Route path='/ourstudentdata' element={<OurStudentdata/>}></Route>
 
     <Route path='/mycustomtable' element={<Mycustomtable/>}></Route>
