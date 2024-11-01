@@ -45,6 +45,14 @@
     color: blue;
 }
 
+@media (max-width:768px){
+    .f-courses{
+        display: none;
+    }
+    .address {
+        width: 35%;
+    }
+}
 @media (max-width: 576px) {
     .brand-logo{
         width: 100%;

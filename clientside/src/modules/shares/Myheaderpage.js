@@ -15,7 +15,7 @@ function Myheaderpage()
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top">
     <div className="container-fluid ">
-      <Link to='/mymainpage'><img src={logo} alt='Company logo' className='brand-logo' /></Link>
+      <Link to='/'><img src={logo} alt='Company logo' className='brand-logo' /></Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -25,10 +25,10 @@ function Myheaderpage()
             <Link to="/"className="nav-link active"  aria-current="page" href="#"><FontAwesomeIcon icon={faHouse} />Home</Link>
           </li>
           <li className="nav-item">
-            <Link to='/myplacement' className="nav-link" ><FontAwesomeIcon icon={faLocationDot} />Placement</Link>
+            <Link to='/myplacement' className="nav-link active" ><FontAwesomeIcon icon={faLocationDot} />Placement</Link>
           </li>
           <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                    <a className="nav-link active dropdown-toggle " href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
                         <FontAwesomeIcon icon={faBook} />
                         Courses
@@ -49,14 +49,14 @@ function Myheaderpage()
                         <li><a className="dropdown-item" href="angular js">Angular js</a></li>
                     </ul>
           </li>
-          <li><Link to='/myloginpage' className="btn btn-custom me-2"><FontAwesomeIcon icon={faRightToBracket} />Login</Link></li>
-          <li><Link to='/ourstudentdata' className="btn btn-custom me-2"><PeopleAltIcon/>Our Student's</Link></li>
+          <li><Link to='/myloginpage' className="nav-link active me-2"><FontAwesomeIcon icon={faRightToBracket} />Login</Link></li>
+          <li><Link to='/ourstudentdata' className="nav-link active me-2"><PeopleAltIcon/>Our Student's</Link></li>
 
 
         </ul>
         <span style={{display:"block", width:"250px"}}> {vusername}</span>
         <form className="d-flex" role="search">
-          <button className="btn " type="submit"><AddIcCallIcon/>Conatct Us</button>
+          <button className="btn nav-link active" type="submit"><AddIcCallIcon/>Conatct Us</button>
           
         </form>
       </div>

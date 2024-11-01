@@ -4,6 +4,7 @@ import carimg2 from '../images/website-development-process-scaled.jpg'
 import Myfooterpage from "../shares/Myfooterpage";
 import Modal from "../shares/Coursemodal";
 import Cardcarousel from "../shares/Cardcarousel";
+import Myheaderpage from "../shares/Myheaderpage";
 const courseData = [
   { image: "java-course.png", title: "Java", description: "Transform your development journey with Java—build robust, platform-independent applications that power the world's software!" },
   { image: "python.png", title: "Python", description: "Discover endless possibilities with Python—craft clean, efficient code for web development, data science, and beyond!" },

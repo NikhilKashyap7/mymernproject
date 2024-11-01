@@ -43,6 +43,19 @@ function Cardcarousel(){
         autoplay: true,
         autoplaySpeed: 2000,
         slidesToShow: 3,
+        responsive: [
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow:1
+              }
+            },
+              {breakpoint: 768,
+              settings: {
+                slidesToShow:2
+              }
+            }
+          ]
       };
     return(
     <div style={{ width: "80%", margin: "auto", marginTop: "20px" }}>
