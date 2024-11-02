@@ -16,18 +16,18 @@ import { increment } from '../reduxpage/Myaction';
 
 function Myloginpage() {
     const navigate = useNavigate();
-    // const count = useSelector((state) => state.counter.username)
     const dispatch = useDispatch()
     const { register, handleSubmit, formState: { errors }, setError } = useForm();
-
-    const [captcha, setCaptcha] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+
+    // Generates a random captcha code with numbers and symbols, refreshing every 30 seconds or on demand
+    const [captcha, setCaptcha] = useState('');
     const generateCaptcha = () => {
         const a = Math.floor((Math.random() + 1) * 10);
         const b = Math.floor((Math.random() + 1) * 20);
 
-       const y = a >= 15 ? "E" : a>= 10 ? "C" : a>= 6 ? "R" : a>= 4 ? "A" : "p";
-       const z = b >= 40 ? "#" : b >= 30 ? "$" : b >= 20 ? "@" : "&";
+        const y = a >= 15 ? "E" : a >= 10 ? "C" : a >= 6 ? "R" : a >= 4 ? "A" : "p";
+        const z = b >= 40 ? "#" : b >= 30 ? "$" : b >= 20 ? "@" : "&";
         return `${a}${y}${b}${z}`;
     };
 
@@ -42,10 +42,11 @@ function Myloginpage() {
         return () => clearInterval(interval);
     }, []);
 
-    const reloadCaptcha =() => {
+    const reloadCaptcha = () => {
         setCaptcha(generateCaptcha());
     };
 
+    // Validates if the entered captcha matches the generated captcha, and shows an error message if it doesn't
     const mysubmit = (myform) => {
 
         if (myform.captcha !== captcha) {
@@ -56,8 +57,7 @@ function Myloginpage() {
 
     };
 
-
-
+    // Manages login state and updates email or password fields when user types
     const [login, setlogin] = useState({
         email: "",
         pass: ""
@@ -74,6 +74,7 @@ function Myloginpage() {
         })
     }
 
+    // Handles user login by validating input, sending login data to the API, and processing the response
     const userlogin = async () => {
         const { email, pass } = login;
         if (login.email === "" || login.pass === "") {
@@ -113,6 +114,8 @@ function Myloginpage() {
 
     return (
         <>
+         {/* Login form with fields for email, password, and captcha, including validation and submission handling */}
+
             <Myheader />
             <form className="wrapper" onSubmit={handleSubmit(mysubmit)}>
                 <div className='container'>

@@ -28,11 +28,11 @@ function Myheaderpage()
             <Link to='/myplacement' className="nav-link active" ><FontAwesomeIcon icon={faLocationDot} />Placement</Link>
           </li>
           <li className="nav-item dropdown">
-                    <a className="nav-link active dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                    <Link className="nav-link active dropdown-toggle "  id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
                         <FontAwesomeIcon icon={faBook} />
                         Courses
-                    </a>
+                    </Link>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a className="dropdown-item" href="Cyber Security">Cyber Security</a></li>
                         <li><a className="dropdown-item" href="Sap">Sap</a></li>

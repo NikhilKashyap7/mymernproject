@@ -16,7 +16,8 @@ function Myregistorpage() {
 
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
+ 
+    // Returns the date exactly 18 years ago from today in "YYYY-MM-DD" format
     const getEighteenYearsAgoDate = () => {
         const today = new Date();
         today.setFullYear(today.getFullYear() - 18);
@@ -25,6 +26,8 @@ function Myregistorpage() {
         const dd = String(today.getDate()).padStart(2, '0');
         return `${yyyy}-${mm}-${dd}`;
     };
+
+    // Sets up user state with empty fields and a default value for some fields
     const [user, setuser] = useState({
         email: "",
         fullname: "",
@@ -35,7 +38,7 @@ function Myregistorpage() {
         pass: "",
         confirmpass: ""
     });
-
+// Updates the user state with the new input value
     const updateuser = (a) => {
         // console.log(a.target.value);
         const { name, value } = a.target;
@@ -47,6 +50,7 @@ function Myregistorpage() {
         })
     }
 
+// Validates user input fields and submits registration data to the API if all checks pass
     const mysubmitdata = async (e) => {
         e.preventDefault();
         const { email, fullname, phone, gender, course, dob, pass, confirmpass } = user;
@@ -90,6 +94,7 @@ function Myregistorpage() {
 
     return (
          <>
+         {/* Registration form with fields for user input, including email, name, phone, gender, date of birth, course selection, and password */}
          <Myheader />
          <form className='r-wrapper' onSubmit={mysubmitdata}>
             <div className='container'>
