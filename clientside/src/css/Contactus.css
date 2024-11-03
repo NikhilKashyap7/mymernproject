@@ -1,0 +1,60 @@
+.form-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: #6c757d;
+  }
+  .form-container .form-icon {
+    color: #6c757d;
+    font-size: 1.25rem;
+  }
+  .form-container .form-control::placeholder {
+    color: #6c757d;
+    font-size: 0.9rem;
+  }
+  .form-container .submit-btn {
+    border-radius: 30px;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #0a2b48;
+    border: 1px solid #0a2b48;
+  }
+  .ssl-secured {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .ssl-secured img {
+    margin-right: 8px;
+  }
+  .benefits-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .benefit-card {
+    background-image: url(../modules/images/bagground.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  .benefit-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    opacity: 0.7;
+  }
+  .contact-submit{
+    background: linear-gradient(360deg, #d2582b, #001f03);
+    border-radius: 10px;
+    color: #fff;
+  }
+  .contact-submit:hover {
+    background: linear-gradient(180deg, #d2582b, #001f03);
+  }

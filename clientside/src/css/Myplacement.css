@@ -43,6 +43,9 @@
     border-radius: 5px;
     text-align: center;
 }
+.info-icon{
+    color: rgb(230, 67, 67);
+}
 .info a {
     font-size: 17px;
     text-decoration: none;

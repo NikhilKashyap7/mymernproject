@@ -1,0 +1,39 @@
+.cyber-img img{
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    padding: 0;
+}
+.cyber-img{
+    padding: 0;
+}
+.form-group {
+    margin-bottom: 21px !important;
+}
+/* .row{
+    margin: 0;
+} */
+.right-form {
+    margin-top: 40px;
+    box-shadow: 5px 5px 8px rgb(0 0 0 / 23%);
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+.mycard {
+    margin: 43px 0px 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 5px 5px 8px rgb(0 0 0 / 23%) !important;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+.ctn-3 .btn-info {
+    background-color: #fe6364 !important;
+    background-image: inherit !important;
+    border-color: #fe6364 !important;
+    padding: 7px 40px;
+}
+.ctn-3{
+    margin: 20px 0px 0px;
+}

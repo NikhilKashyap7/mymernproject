@@ -34,19 +34,19 @@ function Myheaderpage()
                         Courses
                     </Link>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a className="dropdown-item" href="Cyber Security">Cyber Security</a></li>
-                        <li><a className="dropdown-item" href="Sap">Sap</a></li>
-                        <li><a className="dropdown-item" href="Java">Java</a></li>
-                        <li><a className="dropdown-item" href="Python">Python</a></li>
-                        <li><a className="dropdown-item" href="Software testing">Software Testing</a></li>
-                        <li><a className="dropdown-item" href="graphic designing adn video editing">Graphic Designing And Video Editing</a></li>
-                        <li><a className="dropdown-item" href="React js">React js</a></li>
-                        <li><a className="dropdown-item" href="mean stack">Mean Stack</a></li>
-                        <li><a className="dropdown-item" href="mern stack">Mern Stack</a></li>
-                        <li><a className="dropdown-item" href="Digital marketing">Digital Marketing </a></li>
-                        <li><a className="dropdown-item" href="android">Android</a></li>
-                        <li><a className="dropdown-item" href="aws">AWS</a></li>
-                        <li><a className="dropdown-item" href="angular js">Angular js</a></li>
+                        <li><Link className="dropdown-item" to="/cybersecurity">Cyber Security</Link></li>
+                        <li><Link className="dropdown-item" to="/sap">Sap</Link></li>
+                        <li><Link className="dropdown-item" to="/java">Java</Link></li>
+                        <li><Link className="dropdown-item" to="/python">Python</Link></li>
+                        <li><Link className="dropdown-item" to="/softwaretesting">Software Testing</Link></li>
+                        <li><Link className="dropdown-item" to="/graphicdesign">Graphic Designing And Video Editing</Link></li>
+                        <li><Link className="dropdown-item" to="/reactjs">React js</Link></li>
+                        <li><Link className="dropdown-item" to="/meanstack">Mean Stack</Link></li>
+                        <li><Link className="dropdown-item" to="/mern stack">Mern Stack</Link></li>
+                        <li><Link className="dropdown-item" to="/digitalmarketing">Digital Marketing </Link></li>
+                        <li><Link className="dropdown-item" to="/android">Android</Link></li>
+                        <li><Link className="dropdown-item" to="/aws">AWS</Link></li>
+                        <li><Link className="dropdown-item" to="/angularjs">Angular js</Link></li>
                     </ul>
           </li>
           <li><Link to='/myloginpage' className="nav-link active me-2"><FontAwesomeIcon icon={faRightToBracket} />Login</Link></li>
@@ -56,8 +56,9 @@ function Myheaderpage()
         </ul>
         <span style={{display:"block", width:"250px"}}> {vusername}</span>
         <form className="d-flex" role="search">
-          <button className="btn nav-link active" type="submit"><AddIcCallIcon/>Conatct Us</button>
-          
+        <Link to="/contactus " className="btn nav-link active">
+          <AddIcCallIcon/>Conatct Us
+          </Link>
         </form>
       </div>
     </div>

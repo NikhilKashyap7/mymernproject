@@ -19,6 +19,8 @@ import "./css/Myerrorpage.css"
 import "./css/Modal.css"
 import "./css/Cardcarousel.css"
 import "./css/Myplacement.css"
+import "./css/Cybersecurity.css"
+import "./css/Contactus.css"
 import Mycustomtable from './modules/dashboard/Mycustomtable';
 import Myerrorpage from './modules/shares/Myerrorpage';
 import Userdataview from './modules/dashboard/Userdataview';
@@ -27,6 +29,9 @@ import Usereditpage from './modules/dashboard/Usereditpage';
 import { Provider } from 'react-redux';
 import { store } from './modules/reduxpage/Mystore';
 import Myplacement from './modules/shares/Myplacement';
+import Cybersecurity from './modules/coursepages/Cybersecurity';
+import Sap from './modules/coursepages/Sap';
+import Contactpage from './modules/components/Contactpage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -45,6 +50,9 @@ root.render(
     <Route path='/mycustomtable' element={<Mycustomtable/>}></Route>
     <Route path='/ourstudentdata/userview/:id' element={<Userdataview/>}></Route>
     <Route path='/ourstudentdata/edituser/:id' element={<Usereditpage/>}></Route>
+    <Route path='/cybersecurity' element={<Cybersecurity/>}></Route>
+    <Route path='/sap' element={<Sap/>}></Route>
+    <Route path='/contactus' element={<Contactpage/>}></Route>
 <Route path='*' element={<Myerrorpage/>}></Route>
     </Routes>
     
