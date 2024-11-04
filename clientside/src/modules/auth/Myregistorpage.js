@@ -38,17 +38,38 @@ function Myregistorpage() {
         pass: "",
         confirmpass: ""
     });
+    
+    //State to store the password strength
+    const [passwordStrength, setPasswordstrength] = useState('');
+
 // Updates the user state with the new input value
-    const updateuser = (a) => {
-        // console.log(a.target.value);
-        const { name, value } = a.target;
-        setuser((b) => {
-            return {
-                ...b,
-                [name]: value
-            }
-        })
+const updateuser = (e) => {
+    const { name, value } = e.target;
+    setuser((prev) => ({
+        ...prev,
+        [name]: value
+    }));
+
+    // Check password strength if password field is updated
+    if (name === 'pass') {
+        evaluatePasswordStrength(value);
     }
+};
+
+    const evaluatePasswordStrength = (password) => {
+        if (password.length<8){
+            setPasswordstrength('Weak');
+        }
+        else if (password.length>=8 && /[A-Z]/.test(password) && /\d/.test(password) && /[!@#$%^&*]/.test(password)) {
+            setPasswordstrength('Strong');
+        }
+        else if (password.length>=8){
+            setPasswordstrength('Moderate');
+        }
+        else {
+            setPasswordstrength('');
+        }
+    };
 
 // Validates user input fields and submits registration data to the API if all checks pass
     const mysubmitdata = async (e) => {
@@ -56,6 +77,16 @@ function Myregistorpage() {
         const { email, fullname, phone, gender, course, dob, pass, confirmpass } = user;
 
         const emailValid = /^[a-zA-Z0-9._%+-]+@gmail.com$/;
+
+        const { pass1, confirmpass1 } = user;
+        if (pass1 !== confirmpass1) {
+            alert("Passwords do not match");
+            return;
+        }
+        if (passwordStrength === 'Weak') {
+            alert("Please choose a stronger password");
+            return;
+        }
         if(!emailValid.test(email)){
             alert("!Please write a valid email-id")
             return;
@@ -164,11 +195,22 @@ function Myregistorpage() {
                                 <div className='col-md-6 col-sm-12'>
                                     <div className="mb-3">
                                         <label className="form-label r-label"><LockIcon />Password</label>
-                                        <input type={showPassword ? "text" : "password"} className="form-control r-input" name='pass' value={user.pass} onInput={updateuser} />
+                                        <input type={showPassword ? "text" : "password"} 
+                                               className="form-control r-input"
+                                               name='pass' value={user.pass} 
+                                               onInput={updateuser} 
+                                        />
                                         <button type='button' onClick={() => setShowPassword(!showPassword)} edge="end" className="show-pass-btn">
 
                                             {showPassword ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
                                         </button>
+
+                                        {passwordStrength && passwordStrength !== 'Strong' && (
+                                                <div className='text-danger'>
+                                                    <small>Password Strength: <strong>{passwordStrength}</strong></small>
+                                                </div>
+                                            )}
+
                                     </div>
                                 </div>
 
@@ -190,7 +232,6 @@ function Myregistorpage() {
                                 </div>
                                 <div className='col-12 text-center'>
                                     <div className="mb-3 ">
-
                                         <Link to="/myloginpage" className="btn btn-success  r-btn">Login</Link>
                                     </div>
                                 </div>

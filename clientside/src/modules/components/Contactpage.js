@@ -21,28 +21,28 @@ function Contactpage() {
                                 <span>SSL Secured</span>
                             </div>
                             <form>
-                                <div class="form-row ">
-                                    <div class="form-group col-md-6">
+                                <div class="form-row d-flex justify-content-between">
+                                    <div class="form-group col-md-5">
                                         <label for="firstName">
                                             <i class="form-icon fas fa-user"></i> First Name
                                         </label>
                                         <input type="text" class="form-control" id="firstName" placeholder="First Name" />
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-5">
                                         <label for="lastName">
                                             <i class="form-icon fas fa-user"></i> Last Name
                                         </label>
                                         <input type="text" class="form-control" id="lastName" placeholder="Last Name" />
                                     </div>
                                 </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
+                                <div class="form-row d-flex justify-content-between">
+                                    <div class="form-group col-md-5">
                                         <label for="email">
                                             <i class="form-icon fas fa-envelope"></i> Email
                                         </label>
                                         <input type="email" class="form-control" id="email" placeholder="Email" />
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-5">
                                         <label for="phone">
                                             <i class="form-icon fas fa-phone"></i> Phone Number
                                         </label>
@@ -83,28 +83,28 @@ function Contactpage() {
                             <h3>ZenCode Training Benefits</h3>
                             <div class="row mt-4">
                                 <div class="col-6 mb-3">
-                                    <div class="benefit-card">Experienced Faculty</div>
+                                    <div class="benefit-card1 " style={{height:"90px"}}><b>Experienced Faculty</b></div>
                                 </div>
                                 <div class="col-6 mb-3">
-                                    <div class="benefit-card">Experience Certificate</div>
+                                    <div class="benefit-card2" style={{height:"90px"}}><b>Experience Certificate</b></div>
                                 </div>
                                 <div class="col-6 mb-3">
-                                    <div class="benefit-card">100% Placement Assistance</div>
+                                    <div class="benefit-card3" style={{height:"90px"}}><b>100% Placement Assistance</b></div>
                                 </div>
                                 <div class="col-6 mb-3">
-                                    <div class="benefit-card">Guest Lecture of IT Experts</div>
+                                    <div class="benefit-card4" style={{height:"90px"}}><b>Guest Lecture of IT Experts</b></div>
                                 </div>
                                 <div class="col-6 mb-3">
-                                    <div class="benefit-card">Job Oriented Training</div>
+                                    <div class="benefit-card5" style={{height:"90px"}}><b>Job Oriented Training</b></div>
                                 </div>
                                 <div class="col-6 mb-3">
-                                    <div class="benefit-card">Get Knowledge of AWS</div>
+                                    <div class="benefit-card6" style={{height:"90px"}}><b>Get Knowledge of AWS</b></div>
                                 </div>
                                 <div class="col-6 mb-3">
-                                    <div class="benefit-card">Online and Offline Classes</div>
+                                    <div class="benefit-card7" style={{height:"90px"}}><b>Online and Offline Classes</b></div>
                                 </div>
                                 <div class="col-6 mb-3">
-                                    <div class="benefit-card">Comprehensive Learning Experience</div>
+                                    <div class="benefit-card8" style={{height:"90px"}}><b>Comprehensive Learning Experience</b></div>
                                 </div>
                             </div>
                         </div>

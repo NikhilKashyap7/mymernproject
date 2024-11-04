@@ -16,6 +16,7 @@ function Cybersecurity() {
                 </div>
             </div>
             <section className="main-1-new-sec">
+                {/* Container for main section content */}
                 <div className="container page-bg">
                     <div className="row conten-2">
                         <div className="col-lg-9 mb-5">
@@ -74,7 +75,9 @@ function Cybersecurity() {
                             </div>
                         </div>
 
+            {/* Sidebar column */}
                         <div className="col-lg-3 ">
+                             {/* Card component for additional information */}
                             <div className="item mycard ">
                                 <div className="carousel-design">
                                     <h4>
@@ -92,6 +95,8 @@ function Cybersecurity() {
                                     <Link to="/myloginpage" type="button" className="btn btn-info" >Enroll Now</Link>
                                 </div>
                             </div>
+                            
+                            {/* Enquiry form */}
                             <div className="right-form">
                                 <div className="form">
                                     <form className="group-1">

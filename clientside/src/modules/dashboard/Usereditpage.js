@@ -5,8 +5,8 @@ import logo from '../images/zencode.png'
 import Myapi from "../shares/Myapi";
 
 function Usereditpage() {
-    const navigate = useNavigate();
-    const {id} = useParams();
+    const navigate = useNavigate();// Used hooks here for oraganized navigation
+    const {id} = useParams(); // Used Param to get ID from the URL parameters
     const [user, setuser] = useState({
         email: "",
         fullname: "",
@@ -15,42 +15,47 @@ function Usereditpage() {
         dob: "",
         course: "",
         pass: ""
-    });
+    });// State to hold user details
 
+    //Function to handle input changes
     const edituser = (e)=>{
         // console.log(e.target.value);
-        const {name,value} = e.target;
+        const {name,value} = e.target; // Getting the name and value from the element that triggered the event
         setuser((a)=>{
             return{
                 ...a,
-                [name]:value
+                [name]:value //update the specific field in the user state
             }
         })
     }
 
+    //Function to fetcch the user's current data
     const userupdate = ()=>{
         axios.get(`http://localhost:4707/singleuser/${id}`).then((y)=>{
             // console.log(y);
-            setuser(y.data);
+            setuser(y.data);// setting the fetched user data to state
         });
     }
+
+    // useEffect to fetch user data when the component mounts
     useEffect(()=>{
-        userupdate();
+        userupdate(); // call user update function on mount 
     },[]);
 
+    //Function to submit the updated user details
     const changedetails = async()=>{
         const {email, fullname, course, phone, dob, pass, gender} = user;
         const res =await fetch(`${Myapi}/edituser/${id}` ,{
-            method: "PATCH",
+            method: "PATCH", // Use PATCH to update user details
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify({
                 email,fullname, phone, course, dob, pass, gender
             })
         });
-        const data = await res.json();
+        const data = await res.json();//Parse the response as JSON
         // console.log(data);
-        alert("User Detail Updated");
-        navigate("/");
+        alert("User Detail Updated");//Alert user details have been updated
+        navigate("/"); // Redirect to home page
     }
 
   return (

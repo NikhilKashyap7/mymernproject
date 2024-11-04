@@ -11,14 +11,14 @@ const data = [
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 const CourseChart = () => (
-  <PieChart width={400} height={400}>
+  <PieChart width={800} height={800}>
     <Pie
       data={data}
-      cx={200}
-      cy={200}
+      cx={400}
+      cy={400}
       labelLine={false}
       label={({ name }) => name}
-      outerRadius={100}
+      outerRadius={200}
       fill="#8884d8"
       dataKey="value"
     >

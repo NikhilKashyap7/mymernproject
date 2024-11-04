@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//Defining the Schema or the data type for student data
 const mynew = new mongoose.Schema({
     email:{
         type:String

@@ -29,6 +29,7 @@
   .ssl-secured img {
     margin-right: 8px;
   }
+  
   .benefits-container {
     background-color: #fff;
     padding: 2rem;
@@ -36,14 +37,113 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
-  .benefit-card {
-    background-image: url(../modules/images/bagground.jpg);
+  .benefit-card1 {
+    background-image: url(../modules/images/faculty.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     border-radius: 8px;
     padding: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    max-height: 200px;
+    height: auto;
+    text-align: center;
+    
   }
+  .benefit-card2 {
+    background-image: url(../modules/images/faculty.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.8rem;
+    max-height: 200px;
+    height: auto;
+  }
+  .benefit-card3 {
+    background-image: url(../modules/images/faculty.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.8rem;
+    max-height: 200px;
+    height: auto;
+  }
+  .benefit-card4 {
+    background-image: url(../modules/images/faculty.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.8rem;
+    max-height: 200px;
+    height: auto;
+  }
+  .benefit-card5 {
+    background-image: url(../modules/images/faculty.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.8rem;
+    max-height: 200px;
+    height: auto;
+  }
+  .benefit-card6 {
+    background-image: url(../modules/images/faculty.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.8rem;
+    max-height: 200px;
+    height: auto;
+  }
+  .benefit-card7 {
+    background-image: url(../modules/images/faculty.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.8rem;
+    max-height: 200px;
+    height: auto;
+  }
+  .benefit-card8 {
+    background-image: url(../modules/images/faculty.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    max-height: 200px;
+    height: auto;
+  }
+ 
   .benefit-card img {
     width: 100%;
     height: auto;
@@ -57,4 +157,11 @@
   }
   .contact-submit:hover {
     background: linear-gradient(180deg, #d2582b, #001f03);
+  }
+
+
+  @media (max-width: 576px){
+    .form-row{
+      display: contents!important;
+    }
   }

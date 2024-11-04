@@ -4,7 +4,8 @@ import carimg2 from '../images/website-development-process-scaled.jpg'
 import Myfooterpage from "../shares/Myfooterpage";
 import Modal from "../shares/Coursemodal";
 import Cardcarousel from "../shares/Cardcarousel";
-import Myheaderpage from "../shares/Myheaderpage";
+
+//Course data for the main page 
 const courseData = [
   { image: "java-course.png", title: "Java", description: "Transform your development journey with Java—build robust, platform-independent applications that power the world's software!" },
   { image: "python.png", title: "Python", description: "Discover endless possibilities with Python—craft clean, efficient code for web development, data science, and beyond!" },
@@ -14,6 +15,8 @@ const courseData = [
   { image: "mern-logo.png", title: "Mern", description: "Revolutionize your web development with the MERN stack—build powerful, full-stack applications using MongoDB, Express, React, and Node.js!" },
 
 ];
+
+//Additional course data for another section
 const courseData1 = [
   { image: "mean.png", title: "Mean", description: "Empower your web projects with the MEAN stack—create dynamic applications using MongoDB, Express, Angular, and Node.js for seamless performance!" },
   { image: "angularjs.png", title: "Angular js", description: "Supercharge your web applications with AngularJS—craft dynamic, responsive user interfaces that deliver exceptional performance and user experience!" },
@@ -25,45 +28,49 @@ const courseData1 = [
 ]
 
 function Mymainpage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false); // state to manage modal visibility
+  const [modalContent, setModalContent] = useState(""); // state to hold content for the modal
 
-  // Open modal with selected course content
+  // Open modal with selected course description
   const handleOpenModal = (content) => {
     setModalContent(content);
-    setIsModalOpen(true);
+    setIsModalOpen(true);//open the modal
   };
 
-  // Close modal
+  // Function to Close modal
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
 
 
-
+  //state to manage the current slide index
   const [slider, setSlider] = useState(0);
   const data = [
-    { image: carimg1, buttonText: "More details..." },
+    { image: carimg1, buttonText: "More details..." }, //Slider data with images and button text
     { image: carimg2, buttonText: "Book Appoinment" },
   ];
 
+  // Function to change the slide based on index
   const getSlide = (index) => {
-    setSlider(index);
+    setSlider(index);// set the slider index
   };
 
+  //useEffect to automatically change the slide every 7 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setSlider((prevIndex) => (prevIndex + 1) % data.length);
+      setSlider((prevIndex) => (prevIndex + 1) % data.length); //update slider index
     }, 7000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // clear the interval on cimponent unmount
   }, [data.length]);
 
   const handleButtonClick = () => {
+    // Placeholder for button click functionality (not implemented)
 
   };
   return (
     <Fragment>
+      {/* Slide Section */}
       <div className="slider">
         <div className="slider-img">
           <img
@@ -86,6 +93,7 @@ function Mymainpage() {
         </div>
       </div>
 
+      {/* Information Section */}
       <div className="para-1">
         <h3>Best IT Training Institute with 100% Placement Assistance</h3>
         <p>
@@ -105,25 +113,20 @@ function Mymainpage() {
           You'll be able to enhance your career or commence it with our offline and online IT training. It will impart technical skills and prepare you to enter the IT industry. Moreover, updated study materials, IT training on live projects, and weekday & weekend batches also make CodeSquadz a better choice.
         </p>
       </div>
-
-
       <div className="para-3">
         <h3>Advance IT Training By Industry Experts</h3>
         <p>CodeSquadz provides career-oriented IT training on live projects from industry experts to level up your IT career through new-age tech skills.
         </p>
-
-
       </div>
 
+      {/* Course card Section */}
       <div className="container">
         <div className="row">
           <div className="col-md-12 course-card" >
-
             {courseData.map((course, index) => (
               <div class="card"
                 key={index}
-                onClick={() => handleOpenModal(course.description)}
-              >
+                onClick={() => handleOpenModal(course.description)}>
                 <img src={require(`../images/${course.image}`)} class="card-img-top" alt={course.title} />
                 <div class="card-body">
                   <h6 className="card-title cardtext">{course.title}</h6>
@@ -133,32 +136,28 @@ function Mymainpage() {
           </div>
         </div>
       </div>
-
 
 
       <div className="container">
         <div className="row">
           <div className="col-md-12 course-card" >
-
+            {/* Renders cards for the second set of courses */}
             {courseData1.map((course, index) => (
               <div class="card"
                 key={index}
-                onClick={() => handleOpenModal(course.description)}
-              >
+                onClick={() => handleOpenModal(course.description)} >
                 <img src={require(`../images/${course.image}`)} class="card-img-top" alt={course.title} />
                 <div class="card-body">
                   <h6 className="card-title cardtext">{course.title}</h6>
                 </div>
               </div>
-
-
             ))}
           </div>
         </div>
       </div>
+      {/* Used Bootstrap Modal for displaying course details */}
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} content={modalContent} />
-
-      <h2 style={{textAlign:"center"}}>Our Placed Students</h2>
+      <h2 style={{ textAlign: "center" }}>Our Placed Students</h2>
       <Cardcarousel />
       <Myfooterpage />
     </Fragment>
