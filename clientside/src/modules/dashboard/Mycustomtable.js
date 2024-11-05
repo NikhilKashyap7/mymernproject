@@ -5,6 +5,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import EditIcon from '@mui/icons-material/Edit';
 import Myapi from "../shares/Myapi";
+import jsPDF from "jspdf";
+import DownloadIcon from '@mui/icons-material/Download';
+import PrintIcon from '@mui/icons-material/Print';
 
 function Mycustomtable() {
     //state To hold user data
@@ -32,6 +35,31 @@ function Mycustomtable() {
             });
         }
     };
+
+
+    const downloadPDF = () => {
+        const doc = new jsPDF();
+        doc.text("User Data Table", 14, 10);
+
+        // Defines the columns and rows
+        const columns = ["MongodbId", "FullName", "Email Id", "Phone No.", "Gender", "DOB", "Course"];
+        const rows = user.map((y) => [y._id, y.fullname, y.email, y.phone, y.gender, y.dob, y.course]);
+
+        // Added autoTable to the document
+        doc.autoTable({
+            head: [columns],
+            body: rows,
+            startY: 20,
+            theme: 'grid',
+            headStyles: { fillColor: [22, 160, 133] }, // Customize header color
+        });
+
+        doc.save("user_data.pdf");
+    };
+
+    const printTable = () => {
+        window.print();
+    };
     //Uses useEffect to get user data when the component first loads
     useEffect(() => {
         getalldata();
@@ -46,13 +74,20 @@ function Mycustomtable() {
                             <div className="card-body">
                                 {/* Display total number of users */}
                                 <span className="card-title h4">Total Students: {user.length}</span>
-                                <span className='h3 c-float'></span>
+                                
                             </div>
+                    
                         </div>
+                   
                     </div>
+                 
                 </div>
+                <div>
+                <button className="btn btn-primary mx-2" onClick={downloadPDF}><DownloadIcon/></button>
+                 <button className="btn btn-secondary" onClick={printTable}><PrintIcon/></button>
+             </div>
             </div>
-
+            
 {/*Here's the table to display user data */}
             <table class="table">
                 <thead>
@@ -72,7 +107,7 @@ function Mycustomtable() {
                     {/* Mapping through the user data to create table rows*/}
                     {user.map((y) => {
                         return (
-                            <tr>
+                            <tr key={y._id}>
                                 <th scope="row">{y._id}</th>
                                 <td>{y.fullname}</td>
                                 <td>{y.email}</td>
