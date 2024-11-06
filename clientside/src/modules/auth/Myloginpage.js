@@ -19,16 +19,18 @@ function Myloginpage() {
     const dispatch = useDispatch()
     const { register, handleSubmit, formState: { errors }, setError } = useForm();
     const [showPassword, setShowPassword] = useState(false);
-
+    const [isAnimating, setIsAnimating] = useState(false);
     // Generates a random captcha code with numbers and symbols, refreshing every 30 seconds or on demand
     const [captcha, setCaptcha] = useState('');
     const generateCaptcha = () => {
-        const a = Math.floor((Math.random() + 1) * 10);
-        const b = Math.floor((Math.random() + 1) * 20);
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@$#&';
+        let newCaptcha = '';
 
-        const y = a >= 15 ? "E" : a >= 10 ? "C" : a >= 6 ? "R" : a >= 4 ? "A" : "p";
-        const z = b >= 40 ? "#" : b >= 30 ? "$" : b >= 20 ? "@" : "&";
-        return `${a}${y}${b}${z}`;
+        for (let i = 0; i < 6; i++) {
+            const randomChar = characters[Math.floor(Math.random() * characters.length)];
+            newCaptcha += randomChar;
+        }
+        return newCaptcha;
     };
 
     useEffect(() => {
@@ -36,14 +38,18 @@ function Myloginpage() {
 
         const interval = setInterval(() => {
             setCaptcha(generateCaptcha());
-        }, 30000);
-
+        }, 15000);  // Adjusted to refresh every 15 seconds for extra security
 
         return () => clearInterval(interval);
     }, []);
 
     const reloadCaptcha = () => {
         setCaptcha(generateCaptcha());
+        setIsAnimating(true);
+
+        setTimeout(() => {
+            setIsAnimating(false);
+        }, 1000);
     };
 
     // Validates if the entered captcha matches the generated captcha, and shows an error message if it doesn't
@@ -160,7 +166,7 @@ function Myloginpage() {
                                     <div className='col-4'>
                                         <div className="mb-3 d-flex">
                                             <div className="form-control captcha " style={{ fontWeight: "bold" }}>{captcha}</div>
-                                            <button type="button" onClick={reloadCaptcha} className="captcha-reload"><CachedIcon /></button>
+                                            <button type="button" onClick={reloadCaptcha} className={`captcha-reload ${isAnimating ? 'animate' : ''}`}><CachedIcon /></button>
                                         </div>
                                     </div>
 

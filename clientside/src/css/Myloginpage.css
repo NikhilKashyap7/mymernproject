@@ -44,18 +44,23 @@
     border: none;
      background-color: transparent; 
 } 
-.captcha{
-    font-family: "Tiny5", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 28px;
+.captcha {
+    background-color: #f8f8f8;
+    position: relative;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .captcha-reload{
     background-color: transparent;
     margin-left: 2%;
     border: none;
 }
-.captcha-reload:hover{
+.captcha-reload.animate{
     animation: twist 1s ease;
 }
 @keyframes twist {
