@@ -94,14 +94,14 @@ function Mymainpage() {
       </div>
 
       {/* Information Section */}
-      <div className="para-1">
+      <div className="para-1 col-md-12">
         <h3>Best IT Training Institute with 100% Placement Assistance</h3>
         <p>
           ZenCode is a premium institute that offers professional education to those seeking to pursue their career in IT. In addition, we offer specialized training programs in various fields, including JAVA (Core, Advance, and Core with Advance), Mern-stack, Mean-stack, PHP, Android, iOS, Digital Marketing, Python, and AI/ML for improving IT skills of our students. At ZenCode, we encourage students and existing professionals alike to start and reach greater heights in their IT careers. As a result, our students are attaining higher positions in the IT industry and achieving various milestones.<br /><br />
           At ZenCode, we have a team of industry experts with extensive experience to enhance one's subject knowledge and shape the future of our students. Our experts provide professional education to our students with a practical approach to learning and mastering complex IT concepts. Furthermore, all our IT training programs are available at a competitive price, enabling students to enroll at ZenCode without worrying about its fees.
         </p>
       </div>
-      <div className="para-2">
+      <div className="para-2 col-md-12">
         <h3>Why ZenCode?</h3>
         <p>
           Getting an entry-level job in an IT company is not easy. It depends on various factors, including skills, educational qualifications, and current demand for IT jobs. The competition for these entry-level jobs in an IT company is also fierce. Here, choosing CodeSquadz is ideal because it allows you to enroll for industrial training under the guidance of an industry expert and assured placement support.
@@ -113,7 +113,7 @@ function Mymainpage() {
           You'll be able to enhance your career or commence it with our offline and online IT training. It will impart technical skills and prepare you to enter the IT industry. Moreover, updated study materials, IT training on live projects, and weekday & weekend batches also make CodeSquadz a better choice.
         </p>
       </div>
-      <div className="para-3">
+      <div className="para-3 col-md-12">
         <h3>Advance IT Training By Industry Experts</h3>
         <p>CodeSquadz provides career-oriented IT training on live projects from industry experts to level up your IT career through new-age tech skills.
         </p>
