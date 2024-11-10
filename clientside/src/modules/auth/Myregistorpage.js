@@ -6,11 +6,13 @@ import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import GirlIcon from '@mui/icons-material/Girl';
 import BoyIcon from '@mui/icons-material/Boy';
+import TransgenderIcon from '@mui/icons-material/Transgender';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Myheader from'../shares/Myheaderpage';
+import { blue } from '@mui/material/colors';
 function Myregistorpage() {
     const navigate = useNavigate();
 
@@ -50,13 +52,13 @@ const updateuser = (e) => {
         [name]: value
     }));
 
-    // Check password strength if password field is updated
+    // Checking the password strength if password field is updated
     if (name === 'pass') {
-        evaluatePasswordStrength(value);
+        checkPasswordStrength(value);
     }
 };
 
-    const evaluatePasswordStrength = (password) => {
+    const checkPasswordStrength = (password) => {
         if (password.length<8){
             setPasswordstrength('Weak');
         }
@@ -168,7 +170,10 @@ const updateuser = (e) => {
                                             <input className="form-check-input " type="radio" name="gender" value="Female" checked={user.gender === "Female"} onChange={updateuser} />
                                             <label className="form-check-label r-label"><GirlIcon />Female</label>
                                         </div>
-
+                                        <div className="form-check form-check-inline">
+                                            <input className="form-check-input " type="radio" name="gender" value="Others" checked={user.gender === "Others"} onChange={updateuser} />
+                                            <label className="form-check-label r-label"><TransgenderIcon />Others</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='col-md-6 col-sm-12'>
@@ -229,6 +234,7 @@ const updateuser = (e) => {
                                     <div className="mb-3 ">
                                         <Link to="/myregistorpage" type="submit" className='btn btn-success r-btn' onClick={mysubmitdata}>Register Now</Link>
                                     </div>
+                                    <p style={{color:'maroon', textDecoration: 'underline'}}>Already Have an account</p>
                                 </div>
                                 <div className='col-12 text-center'>
                                     <div className="mb-3 ">

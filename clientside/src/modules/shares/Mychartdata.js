@@ -1,24 +1,23 @@
 import React from 'react';
 import { PieChart, Pie, Cell, Tooltip } from 'recharts';
 
-const data = [
-  { name: 'Marketing', value: 11 },
-  { name: 'DataScience', value: 5 },
-  { name: 'MERN', value: 8 },
-  { name: 'Mean', value: 6 },
-];
+
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
-const CourseChart = () => (
-  <PieChart width={800} height={800}>
+const CourseChart = ({ CourseCounts = {} }) => {
+  const data = Object.entries(CourseCounts).map(([name, value]) => ({ name, value }));
+
+
+  return (
+  <PieChart width={400} height={400}>
     <Pie
       data={data}
-      cx={400}
-      cy={400}
+      cx={200}
+      cy={200}
       labelLine={false}
       label={({ name }) => name}
-      outerRadius={200}
+      outerRadius={150}
       fill="#8884d8"
       dataKey="value"
     >
@@ -29,5 +28,5 @@ const CourseChart = () => (
     <Tooltip />
   </PieChart>
 );
-
+};
 export default CourseChart;

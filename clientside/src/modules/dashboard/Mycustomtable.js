@@ -6,21 +6,32 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import EditIcon from '@mui/icons-material/Edit';
 import Myapi from "../shares/Myapi";
 import jsPDF from "jspdf";
+import "jspdf-autotable";
 import DownloadIcon from '@mui/icons-material/Download';
 import PrintIcon from '@mui/icons-material/Print';
-
+import CourseChart from "../shares/Mychartdata";
 function Mycustomtable() {
     //state To hold user data
     const [user, setuser] = useState([]);
-
+    const [courseCounts, setCourseCounts] = useState({});
     //function to fetcch all user data from the API
     const getalldata = () => {
         axios.get(`${Myapi}/alldata`).then((y) => {
             // console.log(y.data);
-            //Update state with the fetched user data
+            //Updating state with the fetched user data
             setuser(y.data);
+            countCourses(y.data);
         });
     }
+     
+    const countCourses =(data)=> {
+        const counts = data.reduce((acc, curr) => {
+            acc[curr.course] = (acc[curr.course] || 0) + 1;
+            return  acc;
+        }, {});
+        setCourseCounts(counts);
+    };
+
 
     //Function to delete a user by their ID
     const deletedata = async (id) => {
@@ -70,11 +81,18 @@ function Mycustomtable() {
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col mt-3'>
-                        <div className="card mb-3 shadow table-heading">
+                        <div className="card1 mb-3 shadow table-heading">
                             <div className="card-body">
                                 {/* Display total number of users */}
                                 <span className="card-title h4">Total Students: {user.length}</span>
                                 
+                                < div className="mt-2">
+                                {Object.entries(courseCounts).map(([course, count]) => (
+                                    <span key={course} className='me-3'>
+                                        {course}: {count}
+                                    </span>
+                                ))}
+                                    </div>
                             </div>
                     
                         </div>
@@ -89,7 +107,7 @@ function Mycustomtable() {
             </div>
             
 {/*Here's the table to display user data */}
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">MongodbId</th>
@@ -126,6 +144,10 @@ function Mycustomtable() {
                     })}
                 </tbody>
             </table>
+            <div className="container">
+                <h4>Total Students: {user.length}</h4>
+                <CourseChart CourseCounts={courseCounts}/>
+            </div>
         </Fragment>
     )
 }
