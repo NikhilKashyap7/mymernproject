@@ -102,7 +102,7 @@ function Myfooterpage() {
       </section>
 
     </footer>
-      <section className='bottom-fixed hidden-xs'>
+      <section className='bottom-fixed d-none-xs'>
         <div className='container'>
           <div className='row'>
             

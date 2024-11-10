@@ -22,15 +22,15 @@ function Myheaderpage()
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <Link to="/"className="nav-link active"  aria-current="page" href="#"><FontAwesomeIcon icon={faHouse} />Home</Link>
+            <Link to="/"className="nav-link active"  aria-current="page" href="#"><FontAwesomeIcon className='fa-icons' icon={faHouse} />Home</Link>
           </li>
           <li className="nav-item">
-            <Link to='/myplacement' className="nav-link active" ><FontAwesomeIcon icon={faLocationDot} />Placement</Link>
+            <Link to='/myplacement' className="nav-link active" ><FontAwesomeIcon className='fa-icons'icon={faLocationDot} />Placement</Link>
           </li>
           <li className="nav-item dropdown">
                     <Link className="nav-link active dropdown-toggle "  id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <FontAwesomeIcon icon={faBook} />
+                        <FontAwesomeIcon icon={faBook} className='fa-icons'/>
                         Courses
                     </Link>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -49,7 +49,7 @@ function Myheaderpage()
                         <li><Link className="dropdown-item" to="/angularjs">Angular js</Link></li>
                     </ul>
           </li>
-          <li><Link to='/myloginpage' className="nav-link active me-2"><FontAwesomeIcon icon={faRightToBracket} />Login</Link></li>
+          <li><Link to='/myloginpage' className="nav-link active me-2"><FontAwesomeIcon icon={faRightToBracket}className='fa-icons' />Login</Link></li>
           <li><Link to='/ourstudentdata' className="nav-link active me-2"><PeopleAltIcon/>Our Student's</Link></li>
 
 
