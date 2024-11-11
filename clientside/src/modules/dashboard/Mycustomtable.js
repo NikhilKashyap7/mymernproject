@@ -127,13 +127,13 @@ function Mycustomtable() {
                         return (
                             <tr key={y._id}>
                                 <th scope="row">{y._id}</th>
-                                <td>{y.fullname}</td>
-                                <td>{y.email}</td>
-                                <td>{y.phone}</td>
-                                <td>{y.gender}</td>
-                                <td>{y.dob}</td>
-                                <td>{y.course}</td>
-                                <td className='text-end'>
+                                <td data-label="Fullname">{y.fullname}</td>
+                                <td data-label="Email Id">{y.email}</td>
+                                <td data-label="Phone no.">{y.phone}</td>
+                                <td data-label="Gender">{y.gender}</td>
+                                <td data-label="DOB">{y.dob}</td>
+                                <td data-label="Course">{y.course}</td>
+                                <td data-label="Actions">
                                     {/*Added action buttons for editing, deleting, and viewing user data */}
                                     <Link to={`edituser/` + y._id} className="badge btn edit-btn"><EditIcon /></Link>
                                     <button className="btn badge  delete-btn" onClick={() => deletedata(y._id)}><DeleteIcon /></button>

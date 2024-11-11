@@ -40,7 +40,7 @@ myapps.get("/singleuser/:id", async(req,res)=>{
 
 })
 
-//Delte user by ID
+//Delete user by ID
 myapps.delete("/deleterecord/:id", async(req,res)=>{
     const {id} = req.params;
     const del = await myschimatype.findByIdAndDelete({"_id":id});
