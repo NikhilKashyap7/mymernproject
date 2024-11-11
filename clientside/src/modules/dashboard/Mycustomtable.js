@@ -101,8 +101,8 @@ function Mycustomtable() {
                  
                 </div>
                 <div className="d-flex justify-content-end">
-                <button className="btn btn-primary mx-2 btn-comment" onClick={downloadPDF}><DownloadIcon/></button>
-                 <button className="btn btn-secondary btn-comment1" onClick={printTable}><PrintIcon/></button>
+                <button className="btn btn-secondary mx-2 btn-download" onClick={downloadPDF}><DownloadIcon/></button>
+                 <button className="btn btn-secondary mx-2 btn-print" onClick={printTable}><PrintIcon/></button>
              </div>
             </div>
             
