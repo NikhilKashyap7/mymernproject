@@ -14,7 +14,11 @@ function Mycustomtable() {
     //state To hold user data
     const [user, setuser] = useState([]);
     const [courseCounts, setCourseCounts] = useState({});
-    //function to fetcch all user data from the API
+
+    // Password to delete User
+    const deletePassword = 'NikhilCodesquadz';
+
+    //function to fetch all user data from the API
     const getalldata = () => {
         axios.get(`${Myapi}/alldata`).then((y) => {
             // console.log(y.data);
@@ -35,15 +39,23 @@ function Mycustomtable() {
 
     //Function to delete a user by their ID
     const deletedata = async (id) => {
-        const confirmdDelete = window.confirm("Are you sure you want to delete this user data?");
+        const enteringPassword = prompt("To delete User data Please Enter The Secret Password");
+
+        if(enteringPassword === deletePassword) {
+            const confirmdDelete = window.confirm("Are you sure you want to delete this data parmanently?");
+
         if (confirmdDelete) {
             //Making an API call to delte the user data
             await axios.delete(`${Myapi}/deleterecord/${id}`).then((y) => {
                 // console.log(y);
                 //Afetr deleting, fetching updated user data
                 getalldata();
-
+                alert("User data deleted Successfully.")
             });
+        }
+        }
+         else {
+            alert("Incorrect Password");
         }
     };
 

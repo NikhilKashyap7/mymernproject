@@ -122,7 +122,7 @@ function Myloginpage() {
         <>
          {/* Login form with fields for email, password, and captcha, including validation and submission handling */}
 
-            <Myheader />
+            <Myheader/>
             <form className="wrapper" onSubmit={handleSubmit(mysubmit)}>
                 <div className='container'>
                     <div className='row justify-content-center'>
