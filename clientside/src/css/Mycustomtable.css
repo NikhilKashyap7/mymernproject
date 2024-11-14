@@ -53,7 +53,64 @@ body, html {
 .view-btn{
     color: black;
 }
+.btn-download {
+  position: relative;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+.btn-download:hover {
+  background-color: #f0f0f0; 
+  color: #333; 
+  border-color: #ccc; 
+}
+.btn-download:hover::after {
+  content: "Download Table ";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid black;
+  white-space: nowrap;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  font-size: 0.875rem;
+  z-index: 1;
+  left: auto;
+  right: 0;
+}
+.btn-print{
+  position: relative;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
 
+}
+.btn-print:hover{
+  background-color: #f0f0f0; 
+  color: #333; 
+  border-color: #ccc;
+}
+.btn-print:hover::after{
+  content: "Print The Table ";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid black;
+  white-space: nowrap;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  font-size: 0.875rem;
+  left: auto;
+  right: 0;
+  z-index: 999;
+}
+  
 
 @media (max-width: 768px){
   .table thead {
@@ -85,62 +142,5 @@ body, html {
   }
 }
 
-.btn-download {
-    position: relative;
-    transition: all 0.3s ease;
-    margin-bottom: 10px;
-  }
-.btn-download:hover {
-    background-color: #f0f0f0; 
-    color: #333; 
-    border-color: #ccc; 
-  }
-.btn-download:hover::after {
-    content: "Download Table ";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f9f9f9;
-    color: #000;
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid black;
-    white-space: nowrap;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 8px;
-    font-size: 0.875rem;
-    z-index: 1;
-    left: auto;
-    right: 0;
-  }
-  .btn-print{
-    position: relative;
-    transition: all 0.3s ease;
-    margin-bottom: 10px;
 
-  }
-  .btn-print:hover{
-    background-color: #f0f0f0; 
-    color: #333; 
-    border-color: #ccc;
-  }
-  .btn-print:hover::after{
-    content: "Print The Table ";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f9f9f9;
-    color: #000;
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid black;
-    white-space: nowrap;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 8px;
-    font-size: 0.875rem;
-    left: auto;
-    right: 0;
-    z-index: 999;
-  }
-    
   
