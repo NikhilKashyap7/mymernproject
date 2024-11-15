@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from '../images/zencode.png'
 import { useForm } from 'react-hook-form';
 import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Myapi from "../shares/Myapi";
@@ -20,7 +21,7 @@ function Myloginpage() {
     const { register, handleSubmit, formState: { errors }, setError } = useForm();
     const [showPassword, setShowPassword] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
-    // Generates a random captcha code with numbers and symbols, refreshing every 30 seconds or on demand
+    // Generates a random captcha code with numbers and symbols, refreshing every 20 seconds or on demand
     const [captcha, setCaptcha] = useState('');
     const generateCaptcha = () => {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@$#&';
@@ -38,7 +39,7 @@ function Myloginpage() {
 
         const interval = setInterval(() => {
             setCaptcha(generateCaptcha());
-        }, 15000);  // Adjusted to refresh every 15 seconds for extra security
+        }, 20000);  
 
         return () => clearInterval(interval);
     }, []);
@@ -59,7 +60,6 @@ function Myloginpage() {
             setError("captcha", { type: "manual", message: "Captcha does not match!" });
             return;
         }
-
 
     };
 
@@ -84,7 +84,7 @@ function Myloginpage() {
     const userlogin = async () => {
         const { email, pass } = login;
         if (login.email === "" || login.pass === "") {
-            alert("Email id and Password cannot be blank!");
+            toast.error("Email id and Password cannot be blank!");
         }
         else {
             const datares = await fetch(`${Myapi}/login`, {
@@ -95,28 +95,28 @@ function Myloginpage() {
                 })
             });
             const resdata = await datares.json();
-            console.log(resdata);
+            // console.log(resdata);
 
 
 
             if (resdata.status === 220) {
-                alert("Your are sucessfully logged in");
-                navigate('/');
-                dispatch(increment(resdata))
+                toast.success("Your are sucessfully logged in!");
+                dispatch(increment(resdata));
+                setTimeout(()=>{
+                    navigate("/");
+                }, 2000)
             }
 
             if (resdata.status === 620) {
-                alert("e-mail not found");
+                toast.error("e-mail not found");
             }
 
             if (resdata.status === 421) {
-                alert("e-mail and Password didn't match");
+                toast.error("e-mail and Password didn't match");
             }
         }
 
-    }
-
-
+    };
 
     return (
         <>
@@ -129,6 +129,7 @@ function Myloginpage() {
                         <div className='col-md-5  p-3 rounded shadow login'>
                             <div className='container-fluid'>
                                 <div className='row'>
+                                    <ToastContainer/>
                                     <div className='col-12 text-center'>
                                         <div class="mb-3">
                                             <img src={logo} alt='Company logo' className='c-logo' />

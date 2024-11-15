@@ -118,7 +118,7 @@ function Myregistorpage() {
                 })
             });
             const data = await res.json();
-            console.log(data);
+            // console.log(data);
             // alert("Welcome You Are Registered");
             // navigate("/myloginpage");
             toast.success("Welcome You are successfully registered",{ theme: "dark" });
