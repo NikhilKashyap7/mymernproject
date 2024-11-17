@@ -25,6 +25,7 @@ function Myheaderpage() {
   };
 
   return (
+    
     <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top">
       <div className="container-fluid ">
         <Link to='/'><img src={logo} alt='Company logo' className='brand-logo' /></Link>
@@ -83,6 +84,7 @@ function Myheaderpage() {
         </div>
       </div>
     </nav>
+    
   )
 }
 

@@ -90,8 +90,8 @@ function Mycustomtable() {
 
     return (
         <Fragment>
-            <div className='container-fluid'>
-                <div className='row'>
+            <div className='container-fluid' style={{overflowX:"hidden"}}>
+                <div className='row' >
                     <div className='col mt-3'>
                         <div className="card1 mb-3 shadow table-heading">
                             <div className="card-body">
