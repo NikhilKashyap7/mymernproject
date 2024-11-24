@@ -21,6 +21,7 @@ import "./css/Cardcarousel.css"
 import "./css/Myplacement.css"
 import "./css/Cybersecurity.css"
 import "./css/Contactus.css"
+import 'animate.css';
 import Mycustomtable from './modules/dashboard/Mycustomtable';
 import Myerrorpage from './modules/shares/Myerrorpage';
 import Userdataview from './modules/dashboard/Userdataview';

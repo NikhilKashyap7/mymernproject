@@ -20,7 +20,10 @@ body {
 
   width: 180px;
   height: 80px;
-  filter: contrast(10px 2px blue);
+  /* filter: contrast(10px 2px blue); */
+}
+.brand-logo:hover{
+  animation: headShake 1s ;
 }
 .fa-icons{
   margin: 2px;
@@ -42,6 +45,9 @@ body {
 .underline:hover::after{
   transform: scale(1);
   transition: all linear 0.2s;
+}
+.nav-link:hover{
+  animation: pulse 1s;
 }
 @media (max-width: 576px){
   .brand-logo{

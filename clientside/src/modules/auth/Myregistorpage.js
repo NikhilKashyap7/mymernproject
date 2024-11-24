@@ -148,20 +148,20 @@ function Myregistorpage() {
                                     <div className='col-md-6 col-sm-12'>
                                         <div className="mb-3">
                                             <label className="form-label r-label"><EmailIcon />Email address</label>
-                                            <input type="email" className="form-control r-input" name='email' value={user.email} onInput={updateuser} />
+                                            <input type="email" placeholder="eg:yourname@gmail.com" className="form-control r-input" name='email' value={user.email} onInput={updateuser} />
 
                                         </div>
                                     </div>
                                     <div className='col-md-6 col-sm-12'>
                                         <div className="mb-3">
-                                            <label className="form-label r-label">FullName</label>
-                                            <input type="text" className="form-control r-input" name='fullname' value={user.fullname} onInput={updateuser} />
+                                            <label className="form-label r-label">Full Name</label>
+                                            <input type="text" placeholder="Your Name" className="form-control r-input" name='fullname' value={user.fullname} onInput={updateuser} />
                                         </div>
                                     </div>
                                     <div className='col-md-6 col-sm-12'>
                                         <div className="mb-3">
                                             <label className="form-label r-label"><LocalPhoneIcon />Phone No</label>
-                                            <input type="text" className="form-control r-input" name='phone' value={user.phone} onInput={updateuser} />
+                                            <input type="text" placeholder="1234567890" className="form-control r-input" name='phone' value={user.phone} onInput={updateuser} />
                                         </div>
                                     </div>
                                     <div className='col-md-6 col-sm-12'>

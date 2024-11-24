@@ -13,6 +13,7 @@ import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { toast, ToastContainer } from 'react-toastify';
+import 'animate.css';
 function Myheaderpage() {
   const vusername = useSelector((state) => state.counter.username); //Getting username form redux store
   const dispatch = useDispatch();
@@ -77,7 +78,7 @@ function Myheaderpage() {
           </ul>
           <span style={{ display: "block", width: "250px" }}> {vusername ? `User: ${vusername}` : ""}</span>
           <form className="d-flex" role="search">
-            <Link to="/contactus " className="btn nav-link active">
+            <Link to="/contactus " className="btn nav-link active animate__tada">
               <AddIcCallIcon />Conatct Us
             </Link>
           </form>

@@ -141,7 +141,7 @@ function Myloginpage() {
                                     <div className='col-12'>
                                         <div class="mb-3">
                                             <label class="form-label l-label"><EmailIcon />Email address</label>
-                                            <input type="email" className="form-control l-input" {...register("email", { required: true })} name="email" value={login.email} onInput={loginuser} />
+                                            <input type="email" placeholder="eg:yourname@gmail.com" className="form-control l-input" {...register("email", { required: true })} name="email" value={login.email} onInput={loginuser} />
                                             {errors.email?.type === "required" && <p className='error-code'>@email id required!</p>}
                                         </div>
                                     </div>
