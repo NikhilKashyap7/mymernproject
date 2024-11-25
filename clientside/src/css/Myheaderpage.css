@@ -20,7 +20,6 @@ body {
 
   width: 180px;
   height: 80px;
-  /* filter: contrast(10px 2px blue); */
 }
 .brand-logo:hover{
   animation: headShake 1s ;
