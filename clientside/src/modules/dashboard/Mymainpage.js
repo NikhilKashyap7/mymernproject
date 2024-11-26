@@ -4,6 +4,8 @@ import carimg2 from '../images/website-development-process-scaled.jpg'
 import Myfooterpage from "../shares/Myfooterpage";
 import Modal from "../shares/Coursemodal";
 import Cardcarousel from "../shares/Cardcarousel";
+import { motion, useScroll, useSpring } from "framer-motion";
+
 
 //Course data for the main page 
 const courseData = [
@@ -28,6 +30,9 @@ const courseData1 = [
 ]
 
 function Mymainpage() {
+  const { scrollYProgress } = useScroll();
+  
+
   const [isModalOpen, setIsModalOpen] = useState(false); // state to manage modal visibility
   const [modalContent, setModalContent] = useState(""); // state to hold content for the modal
 
@@ -108,8 +113,12 @@ function Mymainpage() {
     return () => observer.disconnect(); // Cleanup on unmount
   }, []);
 
+
   return (
-    <Fragment>
+    <>
+    <motion.div className="progress-bar" style={{ scaleX : scrollYProgress }} />
+
+    
       {/* Slide Section */}
       <div className="slider">
         <div className="slider-img">
@@ -143,7 +152,7 @@ function Mymainpage() {
           At ZenCode, we have a team of industry experts with extensive experience to enhance one's subject knowledge and shape the future of our students. Our experts provide professional education to our students with a practical approach to learning and mastering complex IT concepts. Furthermore, all our IT training programs are available at a competitive price, enabling students to enroll at ZenCode without worrying about its fees.
         </p>
       </div>
-      <div  id="para2"
+      <div id="para2"
         ref={para2Ref}
         className={`para-2 col-md-12 ${visibleSections.para2 ? 'visible' : ''}`}>
         <h3>Why ZenCode?</h3>
@@ -206,7 +215,8 @@ function Mymainpage() {
       <h2 style={{ textAlign: "center" }}>Our Placed Students</h2>
       <Cardcarousel />
       <Myfooterpage />
-    </Fragment>
+
+    </>
   )
 }
 
