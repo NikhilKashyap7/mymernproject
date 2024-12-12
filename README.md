@@ -37,9 +37,6 @@ This project uses the following dependencies:
   npm install @mui/icons-material
 Emotion: Library for CSS-in-JS styling.
 Install:
-
-bash
-Copy code
 npm install @emotion/react
 npm install @emotion/styled
 Bootstrap: CSS framework for responsive design.
@@ -57,7 +54,6 @@ Install: npm install motion
 Icons
 Font Awesome: Icon library.
 Install:
-bash
 Copy code
 npm install @fortawesome/fontawesome-svg-core
 npm install @fortawesome/free-brands-svg-icons
@@ -69,9 +65,11 @@ Install: npm install recharts
 Notifications
 React Toastify: Customizable toast notifications.
 Install: npm install react-toastify
+
 HTTP Requests
 Axios: Promise-based HTTP client.
 Install: npm install axios
+
 PDF Generation
 jsPDF: Generate PDF documents in the browser.
 Install: npm install jspdf
@@ -82,7 +80,6 @@ Install: npm install jspdf-autotable
 Carousels
 React Slick: Carousel component for React.
 Install:
-bash
 Copy code
 npm install react-slick
 npm install slick-carousel
@@ -99,8 +96,6 @@ Install: npm install @testing-library/jest-dom
 Installation Instructions
 To install all dependencies, run the following command in your project directory:
 
-bash
-Copy code
 npm install
 For any specific dependency, use the commands listed above.
 
